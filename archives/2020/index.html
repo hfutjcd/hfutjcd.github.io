@@ -577,10 +577,8 @@
                             <div class="summary block-with-text">
                                 
                                     博客测试图片测试
-
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src)
+注意，图片要放在与博客同名的文件夹中，图片路径不能包含文件夹名，为了在typora中显示图，要打开typora的“格式-&gt;图片-&gt;设置图片根目录”为博客同名文件夹，重启typora。
+本地链接测试hello w
                                 
                             </div>
                             <div class="publish-info">
@@ -589,13 +587,23 @@
                                 </span>
                                 <span class="publish-author">
                                     
-                                    <i class="fas fa-user fa-fw"></i>
-                                    hfutjcd
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/hexo%E6%B5%8B%E8%AF%95/" class="post-category">
+                                    hexo测试
+                                    </a>
+                                    
                                     
                                 </span>
                             </div>
                         </div>
 
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/tags/hexo/"><span class="chip bg-color">-hexo</span></a>
+                            
+                        </div>
                         
                     </div>
                 </div>
@@ -669,7 +677,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">185</span>&nbsp;字
+                class="white-color">297</span>&nbsp;字
             
             
             
@@ -855,7 +863,8 @@ $(function () {
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
-
+<!-- 雪花特效 --> 
+     <script type="text/javascript" src="/libs/others/snow.js"></script> 
     
 
     
