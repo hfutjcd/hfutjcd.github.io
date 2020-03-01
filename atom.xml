@@ -6,15 +6,38 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hfutjcd.github.io/"/>
-  <updated>2020-03-01T05:56:37.226Z</updated>
+  <updated>2020-03-01T14:37:58.672Z</updated>
   <id>http://hfutjcd.github.io/</id>
   
   <author>
-    <name>hfut</name>
+    <name>hfutjcd</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客测试</title>
+    <link href="http://hfutjcd.github.io/2020/03/01/bo-ke-ce-shi/"/>
+    <id>http://hfutjcd.github.io/2020/03/01/bo-ke-ce-shi/</id>
+    <published>2020-03-01T14:25:43.000Z</published>
+    <updated>2020-03-01T14:37:58.672Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;博客测试&quot;&gt;&lt;a href=&quot;#博客测试&quot; class=&quot;headerlink&quot; title=&quot;博客测试&quot;&gt;&lt;/a&gt;博客测试&lt;/h1&gt;&lt;h2 id=&quot;图片测试&quot;&gt;&lt;a href=&quot;#图片测试&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
