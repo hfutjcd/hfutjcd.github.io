@@ -608,7 +608,73 @@
                     
 
                     
+                        
 
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'true' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.3'),
+        listFolded: 'true' === 'true',
+        listMaxHeight: '',
+        audio: eval([{"name":"月半小夜曲","artist":"李克勤","url":"http://music.163.com/song/media/outer/url?id=115162.mp3","cover":"http://p2.music.126.net/bYTctrjUegSyzDPteIeNOw==/74766790705099.jpg?param=300x300"},{"name":"一路向北","artist":"周杰伦","url":"http://music.163.com/song/media/outer/url?id=1415966707.mp3","cover":"/medias/music/avatars/yiluxiangbei.jpg"},{"name":"来自天堂的魔鬼","artist":"邓紫棋","url":"http://music.163.com/song/media/outer/url?id=36270426.mp3","cover":"http://p1.music.126.net/kVwk6b8Qdya8oDyGDcyAVA==/1364493930777368.jpg?param=300x300"},{"name":"倒数","artist":"邓紫棋","url":"http://music.163.com/song/media/outer/url?id=1299550532.mp3","cover":"http://p2.music.126.net/tXCIFsVDK6IKcQ9YWxwOEg==/109951163523944497.jpg?param=300x300"}])
+    });
+});
+</script>
+                    
+
+                    
+                        <link rel="stylesheet" href="/libs/dplayer/DPlayer.min.css">
+<div class="video-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-video-camera"></i>&nbsp;&nbsp;精彩视频
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="dplayer" class="dplayer-video"
+                    ></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/dplayer/DPlayer.min.js"></script>
+<script>
+    $(function () {
+        new DPlayer({
+            container: document.getElementById('dplayer'),
+            autoplay: 'false' === 'true',
+            theme: '#42b983',
+            loop: 'false' === 'true',
+            lang: 'zh-CN' === 'zh-CN' ? 'zh-cn' : 'en',
+            preload: 'auto',
+            volume: Number('0.7'),
+            video: {
+                url: '',
+                pic: '',
+                thumbnails: ''
+            }
+        });
+    });
+</script>
                     
 
                     
