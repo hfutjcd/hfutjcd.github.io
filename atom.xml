@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://hfutjcd.github.io/"/>
-  <updated>2020-03-01T16:10:18.392Z</updated>
+  <updated>2020-03-14T17:14:18.560Z</updated>
   <id>http://hfutjcd.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>学习android-显示系统</title>
+    <link href="http://hfutjcd.github.io/2020/03/11/xue-xi-android-xian-shi-xi-tong/"/>
+    <id>http://hfutjcd.github.io/2020/03/11/xue-xi-android-xian-shi-xi-tong/</id>
+    <published>2020-03-11T14:25:43.000Z</published>
+    <updated>2020-03-14T17:14:18.560Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;androidQ-surfaceflinger介绍&quot;&gt;&lt;a href=&quot;#androidQ-surfaceflinger介绍&quot; class=&quot;headerlink&quot; title=&quot;androidQ surfaceflinger介绍&quot;&gt;&lt;/a&gt;androidQ
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://hfutjcd.github.io/categories/Android/"/>
+    
+    
+      <category term="android" scheme="http://hfutjcd.github.io/tags/android/"/>
+    
+      <category term="surfaceflinger" scheme="http://hfutjcd.github.io/tags/surfaceflinger/"/>
+    
+  </entry>
+  
+  <entry>
     <title>博客测试</title>
     <link href="http://hfutjcd.github.io/2020/03/01/bo-ke-ce-shi/"/>
     <id>http://hfutjcd.github.io/2020/03/01/bo-ke-ce-shi/</id>
     <published>2020-03-01T14:25:43.000Z</published>
-    <updated>2020-03-01T16:10:18.392Z</updated>
+    <updated>2020-03-14T17:13:56.511Z</updated>
     
     <summary type="html">
     
@@ -39,7 +68,7 @@
       <category term="hexo测试" scheme="http://hfutjcd.github.io/categories/hexo%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="-hexo" scheme="http://hfutjcd.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="http://hfutjcd.github.io/tags/hexo/"/>
     
   </entry>
   
