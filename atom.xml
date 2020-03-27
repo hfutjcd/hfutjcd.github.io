@@ -5,9 +5,9 @@
   <subtitle>Hunter&#39;s blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://hfutjcd.github.io/"/>
+  <link href="https://blog.changdong.ltd/"/>
   <updated>2020-03-15T08:21:17.979Z</updated>
-  <id>http://hfutjcd.github.io/</id>
+  <id>https://blog.changdong.ltd/</id>
   
   <author>
     <name>Hunter</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>学习android-显示系统</title>
-    <link href="http://hfutjcd.github.io/2020/03/11/xue-xi-android-xian-shi-xi-tong/"/>
-    <id>http://hfutjcd.github.io/2020/03/11/xue-xi-android-xian-shi-xi-tong/</id>
+    <link href="https://blog.changdong.ltd/2020/03/11/xue-xi-android-xian-shi-xi-tong/"/>
+    <id>https://blog.changdong.ltd/2020/03/11/xue-xi-android-xian-shi-xi-tong/</id>
     <published>2020-03-11T14:25:43.000Z</published>
     <updated>2020-03-15T08:21:17.979Z</updated>
     
@@ -36,19 +36,19 @@
     </summary>
     
     
-      <category term="Android" scheme="http://hfutjcd.github.io/categories/Android/"/>
+      <category term="Android" scheme="https://blog.changdong.ltd/categories/Android/"/>
     
     
-      <category term="android" scheme="http://hfutjcd.github.io/tags/android/"/>
+      <category term="android" scheme="https://blog.changdong.ltd/tags/android/"/>
     
-      <category term="surfaceflinger" scheme="http://hfutjcd.github.io/tags/surfaceflinger/"/>
+      <category term="surfaceflinger" scheme="https://blog.changdong.ltd/tags/surfaceflinger/"/>
     
   </entry>
   
   <entry>
     <title>博客测试</title>
-    <link href="http://hfutjcd.github.io/2020/03/01/bo-ke-ce-shi/"/>
-    <id>http://hfutjcd.github.io/2020/03/01/bo-ke-ce-shi/</id>
+    <link href="https://blog.changdong.ltd/2020/03/01/bo-ke-ce-shi/"/>
+    <id>https://blog.changdong.ltd/2020/03/01/bo-ke-ce-shi/</id>
     <published>2020-03-01T14:25:43.000Z</published>
     <updated>2020-03-27T10:43:16.435Z</updated>
     
@@ -68,10 +68,10 @@
     </summary>
     
     
-      <category term="hexo测试" scheme="http://hfutjcd.github.io/categories/hexo%E6%B5%8B%E8%AF%95/"/>
+      <category term="hexo测试" scheme="https://blog.changdong.ltd/categories/hexo%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="hexo" scheme="http://hfutjcd.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="https://blog.changdong.ltd/tags/hexo/"/>
     
   </entry>
   
