@@ -50,7 +50,7 @@
     <link href="http://hfutjcd.github.io/2020/03/01/bo-ke-ce-shi/"/>
     <id>http://hfutjcd.github.io/2020/03/01/bo-ke-ce-shi/</id>
     <published>2020-03-01T14:25:43.000Z</published>
-    <updated>2020-03-15T11:21:01.451Z</updated>
+    <updated>2020-03-27T10:43:16.435Z</updated>
     
     <summary type="html">
     
@@ -58,7 +58,10 @@
       
         
         
-          &lt;h1 id=&quot;博客测试&quot;&gt;&lt;a href=&quot;#博客测试&quot; class=&quot;headerlink&quot; title=&quot;博客测试&quot;&gt;&lt;/a&gt;博客测试&lt;/h1&gt;&lt;h2 id=&quot;图片测试&quot;&gt;&lt;a href=&quot;#图片测试&quot; class=&quot;headerlink&quot;
+          &lt;h1 id=&quot;博客测试&quot;&gt;&lt;a href=&quot;#博客测试&quot; class=&quot;headerlink&quot; title=&quot;博客测试&quot;&gt;&lt;/a&gt;博客测试&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;记录写blog过程中遇到的语法，便于查询&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2
         
       
     
@@ -69,29 +72,6 @@
     
     
       <category term="hexo" scheme="http://hfutjcd.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://hfutjcd.github.io/2020/03/01/hello-world/"/>
-    <id>http://hfutjcd.github.io/2020/03/01/hello-world/</id>
-    <published>2020-03-01T05:56:37.226Z</published>
-    <updated>2020-03-01T05:56:37.226Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
