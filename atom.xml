@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.changdong.ltd/"/>
-  <updated>2020-03-15T08:21:17.979Z</updated>
+  <updated>2020-03-29T11:21:02.653Z</updated>
   <id>https://blog.changdong.ltd/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo 搭建的坑</title>
+    <link href="https://blog.changdong.ltd/2020/03/27/hexo-da-jian-de-keng/"/>
+    <id>https://blog.changdong.ltd/2020/03/27/hexo-da-jian-de-keng/</id>
+    <published>2020-03-27T12:18:31.000Z</published>
+    <updated>2020-03-29T11:21:02.653Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;github上重定向的域名在hexo clean，hexo g，hexo
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://blog.changdong.ltd/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://blog.changdong.ltd/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>学习android-显示系统</title>
@@ -50,7 +81,7 @@
     <link href="https://blog.changdong.ltd/2020/03/01/bo-ke-ce-shi/"/>
     <id>https://blog.changdong.ltd/2020/03/01/bo-ke-ce-shi/</id>
     <published>2020-03-01T14:25:43.000Z</published>
-    <updated>2020-03-27T10:43:16.435Z</updated>
+    <updated>2020-03-27T12:30:24.379Z</updated>
     
     <summary type="html">
     
@@ -68,10 +99,10 @@
     </summary>
     
     
-      <category term="hexo测试" scheme="https://blog.changdong.ltd/categories/hexo%E6%B5%8B%E8%AF%95/"/>
+      <category term="语法测试" scheme="https://blog.changdong.ltd/categories/%E8%AF%AD%E6%B3%95%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="hexo" scheme="https://blog.changdong.ltd/tags/hexo/"/>
+      <category term="语法测试" scheme="https://blog.changdong.ltd/tags/%E8%AF%AD%E6%B3%95%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

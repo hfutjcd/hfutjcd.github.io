@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>friends | Hunter</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="friends | Hunter">
+  <title>hexo 搭建的坑 | Hunter</title>
+  <meta name="keywords" content=" hexo ">
+  <meta name="description" content="hexo 搭建的坑 | Hunter">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="document.querySelectorAll(&#39;.github-emoji&#39;)           .forEach(el &#x3D;&gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&#39;img&#39;);             img.style">
 <meta property="og:type" content="website">
@@ -243,24 +243,36 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="friends-" class="article article-type-friends" itemscope itemprop="blogPost">
+        <article id="post-hexo-搭建的坑" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">friends</h1>
+        <h1 class="article-title">hexo 搭建的坑</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            
+                <a  data-rel="hexo">hexo</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a class="color5">hexo</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-03-01 15:19:57'>2020-03-01 15:19</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-29 19:21:02'>2020-03-27 20:18</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:52</span>
+        <span>字数:230</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -306,7 +318,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script>
+        <ul>
+<li>问题</li>
+</ul>
+<blockquote>
+<p>github上重定向的域名在hexo clean，hexo g，hexo d之后总是会被情况，需要重新设置。</p>
+</blockquote>
+<ul>
+<li>解决方案</li>
+</ul>
+<blockquote>
+<p>在本地blog的source目录下新建CNAME文件，文件中增加重定向的域名，例如 ‘blog.changdong.ltd’</p>
+</blockquote>
+<ul>
+<li>原因</li>
+</ul>
+<blockquote>
+<p>github重定向会在仓库根目录下创建一个CNAME的文件，内容就是重定向的文件名。在hexo重新生成public文件之后，hexo d操作会删除远程仓库里的CNAME文件，所以重定向就无效了。通过在本地source目录下创建一个一样的CNAME，在hexo g的过程中会在public文件中生成一个CNAME文件，hexo d到远程，就不会导致CNAME文件丢失了。</p>
+</blockquote>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -336,6 +366,18 @@
 </p>
 
 
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>hexo 搭建的坑</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">230</span></p>
+    <p><span class="copy-title">本文作者:</span><a  title="Hunter">Hunter</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-03-27, 20:18:31</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-29, 19:21:02</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/27/hexo-da-jian-de-keng/" title="hexo 搭建的坑">https://blog.changdong.ltd/2020/03/27/hexo-da-jian-de-keng/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
 
 
     <div id="comments"></div>
@@ -361,6 +403,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
