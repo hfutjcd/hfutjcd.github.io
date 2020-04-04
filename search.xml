@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>什么是指令集</title>
+      <link href="/2020/04/04/shi-me-shi-zhi-ling-ji/"/>
+      <url>/2020/04/04/shi-me-shi-zhi-ling-ji/</url>
+      
+        <content type="html"><![CDATA[<h1 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h1><h2 id="指令集的定义"><a href="#指令集的定义" class="headerlink" title="指令集的定义"></a>指令集的定义</h2><ul><li>l指令集架构（Instruction Set Architecture，缩写为ISA），又称指令集或指令集体系，是计算机体系结构中与程序设计有关的部分，包含了基本数据类型，指令集，寄存器，寻址模式，存储体系，中断，异常处理以及外部I/O等</li><li>简单的说，指令集是：<blockquote><p>指令的集合，而一条指令描述处理器的某一种功能<br>程序能够调用的处理器全部功能的集合<br>处理器功能的抽象模型<br>计算机软件与硬件的接口</p></blockquote></li></ul><p>思考：华为、三星、高通等公司都有自己研发的ARM架构处理器，为什么他们都被称为ARM架构处理器呢？<br>回答：因为他们都根据ARM（Adcanced RISC Machine）指令集进行开发，尽管硬件实现的方式不同，但是实现的指令功能一致，工具链一致，对软件表现出的接口一致。<br><img src="image_20200325180353.png?v=1&amp;type=image&amp;token=V1:Xefvf5KRq6MOhHaPzqG4PA3_2iXJuTc-4Wu0P3Ar7XQ" alt=""></p><h2 id="指令集的定义-1"><a href="#指令集的定义-1" class="headerlink" title="指令集的定义"></a>指令集的定义</h2><p>传统意义上，指令分为两种：</p><ul><li><p>精简指令集（Reduced Instruction Set Computer，RISC）</p><ul><li>单指令功能简单，执行速度快，编译效率高，仅能通过LD/ST来访问存储</li><li>如：ARM、MIPS、OpenRISC、RSIC-V、Sparc等</li></ul></li><li><p>复杂指令集（Complex Instruction Set Computer ，CISC）：</p><ul><li>单指令功能强大且复杂，指令周期长，可以直接操作存储器</li><li>如：X86<ul><li>Ascend AI处理器的指令集介乎RISC与CISC之间：</li></ul></li><li>标准指令类似于RISC</li><li>向量、矩阵、数据搬运指令类似于CISC<h2 id="指令与汇编语言"><a href="#指令与汇编语言" class="headerlink" title="指令与汇编语言"></a>指令与汇编语言</h2></li></ul></li><li><p>指令集举例：RISC指令</p></li><li><p><img src="image_20200325180648.png?" alt=""></p><h2 id="指令与汇编语言-1"><a href="#指令与汇编语言-1" class="headerlink" title="指令与汇编语言"></a>指令与汇编语言</h2></li><li><p>什么是汇编？</p><ul><li>从硬件角度看，指令只是二进制数字，称为机器码</li><li>汇编是指令的助记符，为了方便记忆</li><li>汇编是一种低级语言，没有脱离指令集<br>如下所示：<br><img src="image_20200325180826.png" alt=""></li></ul></li><li><p>低级语言与高级语言</p><ul><li>低级语言：没有脱离指令集，汇编语言</li><li>高级语言：脱离了指令集，如C语言</li></ul></li><li><p><img src="image_20200325180940.png" alt="">)<img src="image_20200325180935.png" alt=""></p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 指令集 </tag>
+            
+            <tag> 编程语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo 搭建的坑</title>
       <link href="/2020/03/27/hexo-da-jian-de-keng/"/>
       <url>/2020/03/27/hexo-da-jian-de-keng/</url>
