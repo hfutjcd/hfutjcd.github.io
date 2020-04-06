@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.changdong.ltd/"/>
-  <updated>2020-04-04T13:52:16.004Z</updated>
+  <updated>2020-04-06T07:21:01.450Z</updated>
   <id>https://blog.changdong.ltd/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MTK NPU Dimensity 1000</title>
+    <link href="https://blog.changdong.ltd/2020/04/06/mtk-npu-dimensity-1000/"/>
+    <id>https://blog.changdong.ltd/2020/04/06/mtk-npu-dimensity-1000/</id>
+    <published>2020-04-06T07:00:34.000Z</published>
+    <updated>2020-04-06T07:21:01.450Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;A-3-4-to-13-3TOPS-W-3-6TOPS-Dual-Core-Deep-Learning-Accelerator-for-Versatile-AI-Applications-in-7nm-5G-Smartphone-SoC&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="NPU" scheme="https://blog.changdong.ltd/categories/NPU/"/>
+    
+    
+      <category term="MTK" scheme="https://blog.changdong.ltd/tags/MTK/"/>
+    
+      <category term="NPU" scheme="https://blog.changdong.ltd/tags/NPU/"/>
+    
+      <category term="Dimensity 1000" scheme="https://blog.changdong.ltd/tags/Dimensity-1000/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>指令集-</title>
+    <link href="https://blog.changdong.ltd/2020/04/06/zhi-ling-ji/"/>
+    <id>https://blog.changdong.ltd/2020/04/06/zhi-ling-ji/</id>
+    <published>2020-04-06T06:58:34.181Z</published>
+    <updated>2020-04-06T06:58:34.182Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;指令集&quot;&gt;&lt;a href=&quot;#指令集&quot; class=&quot;headerlink&quot; title=&quot;指令集&quot;&gt;&lt;/a&gt;指令集&lt;/h1&gt;&lt;h2 id=&quot;指令集的定义&quot;&gt;&lt;a href=&quot;#指令集的定义&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>什么是指令集</title>
