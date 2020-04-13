@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.changdong.ltd/"/>
-  <updated>2020-04-06T07:31:23.441Z</updated>
+  <updated>2020-04-13T15:25:07.609Z</updated>
   <id>https://blog.changdong.ltd/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建jupyter notebook 远程服务器</title>
+    <link href="https://blog.changdong.ltd/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/"/>
+    <id>https://blog.changdong.ltd/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/</id>
+    <published>2020-04-13T15:02:03.000Z</published>
+    <updated>2020-04-13T15:25:07.609Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;搭建jupyter远程服务器&quot;&gt;&lt;a href=&quot;#搭建jupyter远程服务器&quot; class=&quot;headerlink&quot; title=&quot;搭建jupyter远程服务器&quot;&gt;&lt;/a&gt;搭建jupyter远程服务器&lt;/h1&gt;&lt;h2 id=&quot;购买云主机&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>MTK NPU Dimensity 1000</title>
@@ -81,7 +104,7 @@
     <link href="https://blog.changdong.ltd/2020/03/27/hexo-da-jian-de-keng/"/>
     <id>https://blog.changdong.ltd/2020/03/27/hexo-da-jian-de-keng/</id>
     <published>2020-03-27T12:18:31.000Z</published>
-    <updated>2020-04-04T13:42:09.995Z</updated>
+    <updated>2020-04-06T07:58:11.943Z</updated>
     
     <summary type="html">
     
@@ -89,11 +112,7 @@
       
         
         
-          &lt;ul&gt;
-&lt;li&gt;问题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;github上重定向的域名在hexo clean，hexo g，hexo
+          &lt;h1 id=&quot;hexo-搭建-使用中遇到的问题总结&quot;&gt;&lt;a href=&quot;#hexo-搭建-使用中遇到的问题总结&quot; class=&quot;headerlink&quot; title=&quot;hexo 搭建/使用中遇到的问题总结&quot;&gt;&lt;/a&gt;hexo 搭建/使用中遇到的问题总结&lt;/h1&gt;&lt;h2
         
       
     
