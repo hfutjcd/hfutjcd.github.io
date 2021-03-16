@@ -20,17 +20,16 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="icon" href="/img/avatar2.jpg">
+<link rel="icon" href="/img/avatar.jpg">
 
-<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
 
 <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script>
@@ -43,7 +42,7 @@
 
 <script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
 
-<script src="/js/iconfont.js?v=1.0.1" ></script>
+<script src="/js/iconfont.js?v=1.1.0" ></script>
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hunter" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
@@ -51,13 +50,20 @@
   <input class="theme_disqus_on" value="false">
   <input class="theme_preload_comment" value="false">
   <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
 </div>
+
+
 
 <body>
 <aside class="nav">
     <div class="nav-left">
-        <a href="/" class="avatar_target">
-    <img class="avatar" src="/img/avatar2.jpg" />
+        <a href="/"
+   class="avatar_target">
+    <img class="avatar"
+         src="/img/avatar.jpg"/>
 </a>
 <div class="author">
     <span>Hunter</span>
@@ -66,43 +72,51 @@
 <div class="icon">
     
         
-        <a title="rss" href="/atom.xml" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-rss"></use>
-                </svg>
-            
-        </a>
+            <a title="rss"
+               href="/atom.xml"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-rss"></use>
+                    </svg>
+                
+            </a>
         
     
         
-        <a title="github" href="https://github.com/hfutjcd" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-github"></use>
-                </svg>
-            
-        </a>
+            <a title="github"
+               href="https://github.com/hfutjcd"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg>
+                
+            </a>
         
     
         
-        <a title="zhihu" href="https://www.zhihu.com/people/gernie" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-zhihu"></use>
-                </svg>
-            
-        </a>
+            <a title="zhihu"
+               href="https://www.zhihu.com/people/gernie"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-zhihu"></use>
+                    </svg>
+                
+            </a>
         
     
         
-        <a title="email" href="mailto:jcdhf0902@sohu.com" target="_blank">
-            
-                <svg class="iconfont-svg" aria-hidden="true">
-                    <use xlink:href="#icon-email"></use>
-                </svg>
-            
-        </a>
+            <a title="email"
+               href="mailto:jcdhf0902@sohu.com"
+               target="_blank">
+                
+                    <svg class="iconfont-svg" aria-hidden="true">
+                        <use xlink:href="#icon-email"></use>
+                    </svg>
+                
+            </a>
         
     
 </div>
@@ -111,60 +125,162 @@
 
 
 <ul>
-    <li><div class="all active">全部文章<small>(6)</small></div></li>
+    <li>
+        <div class="all active" data-rel="全部文章">全部文章
+            
+                <small>(10)</small>
+            
+        </div>
+    </li>
     
         
             
-            <li><div data-rel="NPU">NPU<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="hexo">hexo<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="语法测试">语法测试<small>(1)</small></div>
-                
-            </li>
+                <li>
+                    <div data-rel="Android">
+                        
+                        Android
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
             
         
     
         
             
-            <li><div data-rel="linux">linux<small>(1)</small></div>
-                
-            </li>
+                <li>
+                    <div data-rel="Android,linux">
+                        
+                        Android,linux
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
             
         
     
         
             
-            <li><div data-rel="Android">Android<small>(1)</small></div>
-                
-            </li>
+                <li>
+                    <div data-rel="hexo">
+                        
+                        hexo
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="linux">
+                        
+                        linux
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="NPU">
+                        
+                        NPU
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="图像处理">
+                        
+                        图像处理
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="编程">
+                        
+                        编程
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="编译工具">
+                        
+                        编译工具
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
+            
+        
+    
+        
+            
+                <li>
+                    <div data-rel="语法测试">
+                        
+                        语法测试
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                </li>
             
         
     
 </ul>
 <div class="left-bottom">
     <div class="menus">
-    
-    
-    
-    
+        
+            
+            
+            
     </div>
-    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+    <div>
+        
+            <a class="about  hasFriend  site_url"
+               
+               href="/about">关于</a>
+        
+        <a style="width: 50%"
+                
+                                           class="friends">友链</a>
+        
+    </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="6">
-<input type="hidden" id="yelog_site_word_count" value="30.1k">
+<input type="hidden" id="yelog_site_posts_number" value="10">
+<input type="hidden" id="yelog_site_word_count" value="31.1k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -175,7 +291,7 @@
         <div class="friends-area">
     <div class="friends-title">
         友情链接
-        <i class="back-title-list"></i>
+        <i class="iconfont icon-left"></i>
     </div>
     <div class="friends-content">
         <ul>
@@ -186,64 +302,121 @@
     </div>
 </div>
         <div class="title-list">
-    <form onkeydown="if(event.keyCode === 13){return false;}">
-        <input id="local-search-input" class="search" type="text" placeholder="以 in: 开头进行全文搜索" />
-        <i class="cross"></i>
-        <span>
-            <label for="tagswitch">Tags:</label>
-            <input id="tagswitch" type="checkbox" style="display: none" />
-            <i id="tagsWitchIcon"></i>
-        </span>
-    </form>
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">全部文章</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" autocomplete="off"/>
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
     <div class="tags-list">
-    
-    <li class="article-tag-list-item">
-        <a class="color4">MTK</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">NPU</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">Dimensity 1000</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">hexo</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">语法测试</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color4">指令集</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">编程语言</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color3">android</a>
-    </li>
-    
-    <li class="article-tag-list-item">
-        <a class="color5">surfaceflinger</a>
-    </li>
-    
-    <div class="clearfix"></div>
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>android</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>bat</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>bazel</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>Dimensity 1000</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>MTK</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>NPU</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>sdk</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>surfaceflinger</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>图像处理</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>指令集</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>编程语言</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>语法测试</a>
+            </li>
+        
+    </div>
+
 </div>
 
     
-    <div id="local-search-result">
-
-    </div>
-    
     <nav id="title-list-nav">
         
-        <a  class=""
+        <a  class="全部文章 编程 "
+           href="/2021/01/25/bat-jiao-ben-bu-dan-chuang-yun-xing/"
+           data-tag="bat"
+           data-author="" >
+            <span class="post-title" title="bat脚本不弹窗执行">bat脚本不弹窗执行</span>
+            <span class="post-date" title="2021-01-25 00:00:00">2021/01/25</span>
+        </a>
+        
+        <a  class="全部文章 图像处理 "
+           href="/2020/07/07/tu-xiang-chu-li-jing-dian-wang-luo/"
+           data-tag="图像处理"
+           data-author="" >
+            <span class="post-title" title="图像处理经典网络">图像处理经典网络</span>
+            <span class="post-date" title="2020-07-07 00:00:00">2020/07/07</span>
+        </a>
+        
+        <a  class="全部文章 Android,linux "
+           href="/2020/06/08/ubuntu-install-android-sdk-ndk/"
+           data-tag="android,sdk"
+           data-author="" >
+            <span class="post-title" title="ubuntu install android sdk ndk">ubuntu install android sdk ndk</span>
+            <span class="post-date" title="2020-06-08 22:25:43">2020/06/08</span>
+        </a>
+        
+        <a  class="全部文章 编译工具 "
+           href="/2020/06/08/build-with-bazel/"
+           data-tag="bazel"
+           data-author="" >
+            <span class="post-title" title="build with Bazel">build with Bazel</span>
+            <span class="post-date" title="2020-06-08 00:00:00">2020/06/08</span>
+        </a>
+        
+        <a  class="全部文章 "
            href="/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/"
            data-tag=""
            data-author="" >
@@ -251,7 +424,7 @@
             <span class="post-date" title="2020-04-13 23:02:03">2020/04/13</span>
         </a>
         
-        <a  class="NPU "
+        <a  class="全部文章 NPU "
            href="/2020/04/06/mtk-npu-dimensity-1000/"
            data-tag="MTK,NPU,Dimensity 1000"
            data-author="" >
@@ -259,7 +432,7 @@
             <span class="post-date" title="2020-04-06 15:00:34">2020/04/06</span>
         </a>
         
-        <a  class="linux "
+        <a  class="全部文章 linux "
            href="/2020/04/04/shi-me-shi-zhi-ling-ji/"
            data-tag="指令集,编程语言"
            data-author="" >
@@ -267,7 +440,7 @@
             <span class="post-date" title="2020-04-04 21:38:46">2020/04/04</span>
         </a>
         
-        <a  class="hexo "
+        <a  class="全部文章 hexo "
            href="/2020/03/27/hexo-da-jian-de-keng/"
            data-tag="hexo"
            data-author="" >
@@ -275,7 +448,7 @@
             <span class="post-date" title="2020-03-27 20:18:31">2020/03/27</span>
         </a>
         
-        <a  class="Android "
+        <a  class="全部文章 Android "
            href="/2020/03/11/xue-xi-android-xian-shi-xi-tong/"
            data-tag="android,surfaceflinger"
            data-author="" >
@@ -283,7 +456,7 @@
             <span class="post-date" title="2020-03-11 22:25:43">2020/03/11</span>
         </a>
         
-        <a  class="语法测试 "
+        <a  class="全部文章 语法测试 "
            href="/2020/03/01/bo-ke-ce-shi/"
            data-tag="语法测试"
            data-author="" >
@@ -291,17 +464,23 @@
             <span class="post-date" title="2020-03-01 22:25:43">2020/03/01</span>
         </a>
         
+        <div id="no-item-tips">
+
+        </div>
     </nav>
+    <div id="outline-list">
+    </div>
 </div>
+
     </div>
     <div class="hide-list">
-        <div class="semicircle">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
             <div class="brackets first"><</div>
             <div class="brackets">&gt;</div>
         </div>
     </div>
 </aside>
-<div class="post">
+<div id="post">
     <div class="pjax">
         <article id="post-学习android-显示系统" class="article article-type-post" itemscope itemprop="blogPost">
     
@@ -312,13 +491,16 @@
         
         
         <span class="book">
+            <i class="iconfont icon-category"></i>
             
-                <a  data-rel="Android">Android</a>
+            
+            <a  data-rel="Android">Android</a>
             
         </span>
         
         
         <span class="tag">
+            <i class="iconfont icon-tag"></i>
             
             <a class="color3">android</a>
             
@@ -329,7 +511,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-04-04 21:52:04'>2020-03-11 22:25</time>
+            发布时间 : <time class="date" title='最后更新: 2020-04-04 21:52:04'>2020-03-11 22:25</time>
         
     </div>
     <div class="article-meta">
@@ -338,7 +520,7 @@
         
         
         <span id="busuanzi_container_page_pv">
-            阅读:<span id="busuanzi_value_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
                 <span class="count-comment">
                     <span class="spinner">
                       <div class="cube1"></div>
@@ -380,7 +562,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="androidQ-surfaceflinger介绍"><a href="#androidQ-surfaceflinger介绍" class="headerlink" title="androidQ surfaceflinger介绍"></a>androidQ surfaceflinger介绍</h1><p>[toc]</p>
+        <h1 id="androidQ-surfaceflinger介绍"><a href="#androidQ-surfaceflinger介绍" class="headerlink" title="androidQ surfaceflinger介绍"></a>androidQ surfaceflinger介绍</h1><p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#androidQ-surfaceflinger介绍"><span class="toc-text">androidQ surfaceflinger介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#综述"><span class="toc-text">综述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#从下层往上层理解"><span class="toc-text">从下层往上层理解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#显示屏"><span class="toc-text">显示屏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SurfaceFlinger-图形合成者"><span class="toc-text">SurfaceFlinger-图形合成者</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#上层绘图"><span class="toc-text">上层绘图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VSync以及三缓冲"><span class="toc-text">VSync以及三缓冲</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Drawing-Without-VSync"><span class="toc-text">Drawing Without VSync</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Drawing-With-VSync"><span class="toc-text">Drawing With VSync</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Choreographer-VSync信号的上层接收者"><span class="toc-text">Choreographer VSync信号的上层接收者</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#parallel-processing-and-triple-buffering"><span class="toc-text">parallel processing and triple buffering</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rc文件配置"><span class="toc-text">rc文件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#surfaceflinger对象创建"><span class="toc-text">surfaceflinger对象创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建surfaceflinger实例"><span class="toc-text">创建surfaceflinger实例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SurfaceFlinger和SurfaceFlingerEx"><span class="toc-text">SurfaceFlinger和SurfaceFlingerEx</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SurfaceFlinger初始化"><span class="toc-text">SurfaceFlinger初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#OnFistRef调用"><span class="toc-text">OnFistRef调用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#mEventQueue"><span class="toc-text">mEventQueue</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#init初始化"><span class="toc-text">init初始化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#surfaceFlinger运行通路"><span class="toc-text">surfaceFlinger运行通路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#app-Vsync信号注册和回调"><span class="toc-text">app-Vsync信号注册和回调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sf-Vsync信号注册和回调"><span class="toc-text">sf-Vsync信号注册和回调</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#代码调用流程"><span class="toc-text">代码调用流程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#流程图"><span class="toc-text">流程图</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建Activity和注册surface流程"><span class="toc-text">创建Activity和注册surface流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Activity的启动流程"><span class="toc-text">Activity的启动流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一切从main-方法开始"><span class="toc-text">一切从main()方法开始</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#创建Application的消息是如何发送的呢？"><span class="toc-text">创建Application的消息是如何发送的呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IActivityManager-mgr是个啥？"><span class="toc-text">IActivityManager mgr是个啥？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ApplicationThread-mAppThread又是个啥？"><span class="toc-text">ApplicationThread mAppThread又是个啥？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ActivityManagerService调度发送初始化消息"><span class="toc-text">ActivityManagerService调度发送初始化消息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#收到初始化消息之后的世界"><span class="toc-text">收到初始化消息之后的世界</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Instrumentation仪表，什么鬼？"><span class="toc-text">Instrumentation仪表，什么鬼？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LoadedApk就是data-info哦！"><span class="toc-text">LoadedApk就是data.info哦！</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#现在把目光移回Instrumentation"><span class="toc-text">现在把目光移回Instrumentation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LaunchActivity"><span class="toc-text">LaunchActivity</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#surfaceFlinger创建surface"><span class="toc-text">surfaceFlinger创建surface</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#window添加view过程"><span class="toc-text">window添加view过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#native层创建surface"><span class="toc-text">native层创建surface</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#SurfaceComposerClient的创建"><span class="toc-text">SurfaceComposerClient的创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Surface的创建"><span class="toc-text">Surface的创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SurfaceControl的创建"><span class="toc-text">SurfaceControl的创建</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#IGraphicBufferProducer-gbp-的创建"><span class="toc-text">IGraphicBufferProducer(gbp)的创建</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#从SurfaceControl中获取Surface"><span class="toc-text">从SurfaceControl中获取Surface</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app侧硬件加速绘制surface流程"><span class="toc-text">app侧硬件加速绘制surface流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-OpenGL环境的初始化"><span class="toc-text">Android OpenGL环境的初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-OpenGL-GPU-渲染"><span class="toc-text">Android OpenGL GPU 渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SyncAndDrawFrame-同步"><span class="toc-text">SyncAndDrawFrame 同步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Render线程issue提交OpenGL渲染命令"><span class="toc-text">Render线程issue提交OpenGL渲染命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Render线程swapBuffers提交图形缓冲区（加Fence机制）"><span class="toc-text">Render线程swapBuffers提交图形缓冲区（加Fence机制）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#surfaceflinger合成surface"><span class="toc-text">surfaceflinger合成surface</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SurfaceFlinger合成消息"><span class="toc-text">SurfaceFlinger合成消息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#handleMessageTransaction"><span class="toc-text">handleMessageTransaction()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#handleMessageInvalidate"><span class="toc-text">handleMessageInvalidate()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#handleMessageRefresh"><span class="toc-text">handleMessageRefresh()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#void-SurfaceFlinger-preComposition"><span class="toc-text">void SurfaceFlinger::preComposition()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#void-SurfaceFlinger-rebuildLayerStacks"><span class="toc-text">void SurfaceFlinger::rebuildLayerStacks()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#void-SurfaceFlinger-setUpHWComposer"><span class="toc-text">void SurfaceFlinger::setUpHWComposer()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#void-SurfaceFlinger-doComposition"><span class="toc-text">void SurfaceFlinger::doComposition()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#void-SurfaceFlinger-postComposition-refreshStartTime"><span class="toc-text">void SurfaceFlinger::postComposition(refreshStartTime)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HWC消息合成通路"><span class="toc-text">HWC消息合成通路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HWC接收surface"><span class="toc-text">HWC接收surface</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HWC处理surface"><span class="toc-text">HWC处理surface</span></a></li></ol></li></ol></li></ol></div></p>
 <p><em>surfaceflinger是android系统的一个重要后台服务，该服务跟随系统启动，由systemservice服务启动。主要负责android的显示控制任务，本文主要介绍androidQ(android 10)系统中的surfaceflinger服务。</em></p>
 <hr>
 <h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><p>本文讲解的内容是Android4.1以后的系统机制，将从整体上分析Android图形显示系统的结构，不深入分析每一层内部的代码实现，更多的是使用流程图和结构图来让大家理解Android是如何绘制、合成图形并显示到屏幕上。</p>
@@ -3236,18 +3418,6 @@ SurfaceFlinger<span class="token operator">::</span><span class="token function"
 </p>
 
 
-<div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>学习android-显示系统</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">27.1k</span></p>
-    <p><span class="copy-title">本文作者:</span><a  title="Hunter">Hunter</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-03-11, 22:25:43</p>
-    <p><span class="copy-title">最后更新:</span>2020-04-04, 21:52:04</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/11/xue-xi-android-xian-shi-xi-tong/" title="学习android-显示系统">https://blog.changdong.ltd/2020/03/11/xue-xi-android-xian-shi-xi-tong/</a>
-    <p>
-        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-    </p>
-</div>
-
 
 
     <div id="comments"></div>
@@ -3320,23 +3490,18 @@ SurfaceFlinger<span class="token operator">::</span><span class="token function"
 
     </div>
     <div class="copyright">
-        <p class="footer-entry">©2019-2029 Hunter</p>
+        <p class="footer-entry">
+    ©2019-2029 Hunter
+</p>
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
     <div class="full-toc">
-        <button class="full"><span class="min "></span></button>
-<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
-<div class="post-toc"><span class="post-toc-title">目录</span>
-    <div class="post-toc-content">
-
-    </div>
-</div>
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
     </div>
 </div>
-<div class="acParent"></div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
 <div class="shang_box">
@@ -3357,23 +3522,15 @@ SurfaceFlinger<span class="token operator">::</span><span class="token function"
 
 
 </body>
-<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
 
-<script src="/js/script.js?v=1.0.1" ></script>
+<script src="/js/script.js?v=1.1.0" ></script>
 <script>
     var img_resize = 'default';
-    /*作者、标签的自动补全*/
-    $(function () {
-        $('.search').AutoComplete({
-            'data': ['#MTK','#NPU','#Dimensity 1000','#hexo','#语法测试','#指令集','#编程语言','#android','#surfaceflinger',],
-            'itemHeight': 20,
-            'width': 418
-        }).AutoComplete('show');
-    })
     function initArticle() {
         /*渲染对应的表格样式*/
         
-            $(".post .pjax table").addClass("green_title");
+            $("#post .pjax table").addClass("green_title");
         
 
         /*渲染打赏样式*/
@@ -3390,7 +3547,7 @@ SurfaceFlinger<span class="token operator">::</span><span class="token function"
         /*高亮代码块行号*/
         
         $('pre code').each(function(){
-            var lines = $(this).text().split('\n').length - 1, widther='';
+            var lines = $(this).text().trim().split('\n').length, widther='';
             if (lines>99) {
                 widther = 'widther'
             }
@@ -3444,7 +3601,7 @@ SurfaceFlinger<span class="token operator">::</span><span class="token function"
         margin-left: 35px;
     }
     .pre-numbering{
-        margin: 0px;
+        margin: 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -3496,9 +3653,6 @@ SurfaceFlinger<span class="token operator">::</span><span class="token function"
         .nav.fullscreen {
             margin-left: 0;
         }
-        .nav .hide-list.fullscreen {
-            left: 492px
-        }
     }
     
     @media screen and (max-width: 426px) {
@@ -3529,20 +3683,20 @@ SurfaceFlinger<span class="token operator">::</span><span class="token function"
 
     /*列表样式*/
     
-    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+    #post .pjax article .article-entry>ol, #post .pjax article .article-entry>ul, #post .pjax article>ol, #post .pjax article>ul{
         border: #e2dede solid 1px;
         border-radius: 10px;
         padding: 10px 32px 10px 56px;
     }
-    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+    #post .pjax article .article-entry li>ol, #post .pjax article .article-entry li>ul,#post .pjax article li>ol, #post .pjax article li>ul{
         padding-top: 5px;
         padding-bottom: 5px;
     }
-    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+    #post .pjax article .article-entry>ol>li, #post .pjax article .article-entry>ul>li,#post .pjax article>ol>li, #post .pjax article>ul>li{
         margin-bottom: auto;
         margin-left: auto;
     }
-    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+    #post .pjax article .article-entry li>ol>li, #post .pjax article .article-entry li>ul>li,#post .pjax article li>ol>li, #post .pjax article li>ul>li{
         margin-bottom: auto;
         margin-left: auto;
     }

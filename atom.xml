@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.changdong.ltd/"/>
-  <updated>2020-04-13T15:25:07.609Z</updated>
+  <updated>2021-03-16T14:43:37.812Z</updated>
   <id>https://blog.changdong.ltd/</id>
   
   <author>
@@ -17,11 +17,122 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>bat脚本不弹窗执行</title>
+    <link href="https://blog.changdong.ltd/2021/01/25/bat-jiao-ben-bu-dan-chuang-yun-xing/"/>
+    <id>https://blog.changdong.ltd/2021/01/25/bat-jiao-ben-bu-dan-chuang-yun-xing/</id>
+    <published>2021-01-24T16:00:00.000Z</published>
+    <updated>2021-03-16T14:43:37.812Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;目的：&lt;br&gt;  通过脚本执行一个长期服务的时候，不希望服务一直在前台运行，在点击脚本后，自动切到后台。&lt;br&gt;  以adbforward为例。&lt;/p&gt;
+&lt;pre class=&quot; language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编程" scheme="https://blog.changdong.ltd/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="bat" scheme="https://blog.changdong.ltd/tags/bat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图像处理经典网络</title>
+    <link href="https://blog.changdong.ltd/2020/07/07/tu-xiang-chu-li-jing-dian-wang-luo/"/>
+    <id>https://blog.changdong.ltd/2020/07/07/tu-xiang-chu-li-jing-dian-wang-luo/</id>
+    <published>2020-07-06T16:00:00.000Z</published>
+    <updated>2021-03-16T14:44:12.415Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;图像处理经典网络整理&quot;&gt;&lt;a href=&quot;#图像处理经典网络整理&quot; class=&quot;headerlink&quot; title=&quot;图像处理经典网络整理&quot;&gt;&lt;/a&gt;图像处理经典网络整理&lt;/h1&gt;&lt;h2 id=&quot;图像分类网络&quot;&gt;&lt;a href=&quot;#图像分类网络&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="图像处理" scheme="https://blog.changdong.ltd/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+      <category term="图像处理" scheme="https://blog.changdong.ltd/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu install android sdk ndk</title>
+    <link href="https://blog.changdong.ltd/2020/06/08/ubuntu-install-android-sdk-ndk/"/>
+    <id>https://blog.changdong.ltd/2020/06/08/ubuntu-install-android-sdk-ndk/</id>
+    <published>2020-06-08T14:25:43.000Z</published>
+    <updated>2021-03-16T14:33:53.298Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;sdk安装&quot;&gt;&lt;a href=&quot;#sdk安装&quot; class=&quot;headerlink&quot; title=&quot;sdk安装&quot;&gt;&lt;/a&gt;sdk安装&lt;/h1&gt;&lt;h2 id=&quot;安装-android-sdk&quot;&gt;&lt;a href=&quot;#安装-android-sdk&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android,linux" scheme="https://blog.changdong.ltd/categories/Android-linux/"/>
+    
+    
+      <category term="android" scheme="https://blog.changdong.ltd/tags/android/"/>
+    
+      <category term="sdk" scheme="https://blog.changdong.ltd/tags/sdk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>build with Bazel</title>
+    <link href="https://blog.changdong.ltd/2020/06/08/build-with-bazel/"/>
+    <id>https://blog.changdong.ltd/2020/06/08/build-with-bazel/</id>
+    <published>2020-06-07T16:00:00.000Z</published>
+    <updated>2021-03-16T14:33:53.297Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;build-with-Bazel&quot;&gt;&lt;a href=&quot;#build-with-Bazel&quot; class=&quot;headerlink&quot; title=&quot;build with Bazel&quot;&gt;&lt;/a&gt;build with &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="编译工具" scheme="https://blog.changdong.ltd/categories/%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="bazel" scheme="https://blog.changdong.ltd/tags/bazel/"/>
+    
+  </entry>
+  
+  <entry>
     <title>搭建jupyter notebook 远程服务器</title>
     <link href="https://blog.changdong.ltd/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/"/>
     <id>https://blog.changdong.ltd/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/</id>
     <published>2020-04-13T15:02:03.000Z</published>
-    <updated>2020-04-13T15:25:07.609Z</updated>
+    <updated>2020-04-13T15:34:55.428Z</updated>
     
     <summary type="html">
     

@@ -4,6 +4,108 @@
   
     
     <entry>
+      <title>bat脚本不弹窗执行</title>
+      <link href="/2021/01/25/bat-jiao-ben-bu-dan-chuang-yun-xing/"/>
+      <url>/2021/01/25/bat-jiao-ben-bu-dan-chuang-yun-xing/</url>
+      
+        <content type="html"><![CDATA[<p>目的：<br>  通过脚本执行一个长期服务的时候，不希望服务一直在前台运行，在点击脚本后，自动切到后台。<br>  以adbforward为例。</p><pre class=" language-shell"><code class="language-shell"> @echo offif "%1"=="h" goto beginstart mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.close)&&exit:begin::以下为正常批处理命令，不可含有pause set/p等交互命令java -jar E:\tools\adbforward\windows\adb-forward-windows\adbportforward.jar server adblocation=E:\tools\adbforward\windowspause</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bat </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>图像处理经典网络</title>
+      <link href="/2020/07/07/tu-xiang-chu-li-jing-dian-wang-luo/"/>
+      <url>/2020/07/07/tu-xiang-chu-li-jing-dian-wang-luo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="图像处理经典网络整理"><a href="#图像处理经典网络整理" class="headerlink" title="图像处理经典网络整理"></a>图像处理经典网络整理</h1><h2 id="图像分类网络"><a href="#图像分类网络" class="headerlink" title="图像分类网络"></a>图像分类网络</h2><ul><li>MobileNet-series </li><li>Resnet-series</li><li>Inception-series<h2 id="图像检测-分割类网络"><a href="#图像检测-分割类网络" class="headerlink" title="图像检测/分割类网络"></a>图像检测/分割类网络</h2></li><li>SSD-series</li><li>Unet</li><li>DeepLab V3+<h2 id="图像质量类"><a href="#图像质量类" class="headerlink" title="图像质量类"></a>图像质量类</h2></li><li>SID</li><li>EDSR</li><li>VDSR</li><li>SRGAN</li><li>FSRCNN</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 图像处理 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 图像处理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ubuntu install android sdk ndk</title>
+      <link href="/2020/06/08/ubuntu-install-android-sdk-ndk/"/>
+      <url>/2020/06/08/ubuntu-install-android-sdk-ndk/</url>
+      
+        <content type="html"><![CDATA[<h1 id="sdk安装"><a href="#sdk安装" class="headerlink" title="sdk安装"></a>sdk安装</h1><h2 id="安装-android-sdk"><a href="#安装-android-sdk" class="headerlink" title="安装 android-sdk"></a>安装 android-sdk</h2><pre><code>sudo apt install android-sdk</code></pre><h2 id="下载cmdline-tool"><a href="#下载cmdline-tool" class="headerlink" title="下载cmdline-tool"></a>下载<a href="https://developer.android.com/studio/index.html#downloads" target="_blank" rel="noopener">cmdline-tool</a></h2><pre><code>wget https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zipunzip commandlinetools-linux-6514223_latest.zip</code></pre><h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><ul><li><p>在上步解压的zip文件到android-sdk路径”/usr/lib/android-sdk/“新建”mkdir cmdline-tools”，拷贝解压文件到“/usr/lib/android-sdk/cmdline-tools”</p></li><li><p>修改”~/.bashrc文件，增加以下内容，source ~/ .bashrc文件生效。</p></li><li><pre class=" language-bash"><code class="language-bash"><span class="token function">export</span> ANDROID_SDK_ROOT<span class="token operator">=</span>/usr/lib/android-sdk<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">$PATH</span><span class="token keyword">:</span><span class="token variable">$NDK</span><span class="token keyword">:</span><span class="token variable">$ANDROID_SDK_ROOT</span>/cmdline-tools/tools/bin</code></pre></li></ul><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><ul><li>sdkmanager –version 输出版本号<h2 id="查看已安装和可用的平台"><a href="#查看已安装和可用的平台" class="headerlink" title="查看已安装和可用的平台"></a>查看已安装和可用的平台</h2><pre><code>sdkmanager --sdk_root=/usr/lib/android-sdk --proxy=http --proxy_host=xxx.xxx.com --proxy_port=8080  --list</code></pre>如果不需要代理，可以只用’sdkmanager –sdk_root=/usr/lib/android-sdk  –list’</li></ul><h2 id="下载编译平台"><a href="#下载编译平台" class="headerlink" title="下载编译平台"></a>下载编译平台</h2><pre><code>  sdkmanager --sdk_root=/usr/lib/android-sdk --proxy=http --proxy_host=xxx.xxx.com .com --proxy_port=8080  "platform-tools" "ndk;18.1.5063045" "platforms;android-29" </code></pre><h1 id="只需要ndk中的adb等工具可以只下载ndk文件，配置一下环境变量。"><a href="#只需要ndk中的adb等工具可以只下载ndk文件，配置一下环境变量。" class="headerlink" title="只需要ndk中的adb等工具可以只下载ndk文件，配置一下环境变量。"></a>只需要ndk中的adb等工具可以只下载ndk文件，配置一下环境变量。</h1><h2 id="下载-amp-解压"><a href="#下载-amp-解压" class="headerlink" title="下载&amp;解压"></a>下载&amp;解压</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">wget</span> https://dl.google.com/android/repository/android-ndk-r20b-linux-x86_64.zip?hl<span class="token operator">=</span>zh_cnunzip android-ndk-r20b-linux-x86_64.zip?hl<span class="token operator">=</span>zh_cn</code></pre><h2 id="配置环境变量-bashrc文件"><a href="#配置环境变量-bashrc文件" class="headerlink" title="配置环境变量~/.bashrc文件"></a>配置环境变量~/.bashrc文件</h2><pre class=" language-bash"><code class="language-bash"><span class="token function">export</span> NDK<span class="token operator">=</span>xxx/android-ndk-r20b<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">$PATH</span><span class="token keyword">:</span><span class="token variable">$NDK</span></code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android,linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> android </tag>
+            
+            <tag> sdk </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>build with Bazel</title>
+      <link href="/2020/06/08/build-with-bazel/"/>
+      <url>/2020/06/08/build-with-bazel/</url>
+      
+        <content type="html"><![CDATA[<h1 id="build-with-Bazel"><a href="#build-with-Bazel" class="headerlink" title="build with Bazel"></a>build with <a href="https://docs.bazel.build/versions/master/bazel-overview.html" target="_blank" rel="noopener">Bazel</a></h1><h2 id="what-is-Bazel"><a href="#what-is-Bazel" class="headerlink" title="what is Bazel?"></a>what is Bazel?</h2><p>What is Bazel?<br>Bazel is an open-source build and test tool similar to Make, Maven, and Gradle. It uses a human-readable, high-level build language. Bazel supports projects in multiple languages and builds outputs for multiple platforms. Bazel supports large codebases across multiple repositories, and large numbers of users.</p><h2 id="how-to-install-Bazel"><a href="#how-to-install-Bazel" class="headerlink" title="how to install Bazel?"></a>how to install Bazel?</h2><ul><li><p>安装编译bazel的依赖工具</p><pre class=" language-makefile"><code class="language-makefile">sudo apt-get install build-essential openjdk-8-jdk python zip unzip</code></pre></li><li><p>下载安装包：</p><pre class=" language-makefile"><code class="language-makefile"><span class="token symbol">wget https</span><span class="token punctuation">:</span>//github.com/bazelbuild/bazel/releases/download/3.2.0/bazel-3.2.0-dist.zip --no-check-certificate</code></pre></li><li><p>解压</p><pre class=" language-makefile"><code class="language-makefile"> unzip  bazel-3.2.0-dist.zip -d bazel-3.2.0-dist cd bazel-3.2.0-dist</code></pre></li><li><p>编译&amp;安装</p><pre class=" language-makefile"><code class="language-makefile">env EXTRA_BAZEL_ARGS<span class="token operator">=</span><span class="token string">"--host_javabase=@local_jdk//:jdk"</span> bash ./compile.shsudo cp output/bazel /usr/local/bin/</code></pre><ul><li>如果联网需要代理，需要使用cntlm配置代理，<pre><code>export http_proxy=http://127.0.0.1:xxxx</code></pre><h2 id="build-with-Bazel-1"><a href="#build-with-Bazel-1" class="headerlink" title="build with Bazel"></a>build with Bazel</h2>以<a href="https://github.com/tensorflow/tensorflow.git" target="_blank" rel="noopener">tensorflow lite</a>为例，clone 工程到本地目录。<br>配置工程目录下的configure文件，’./configure’。根据自己的硬件配置，开关相应的选项。<br>[操作引导]（<a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/tools/benchmark）" target="_blank" rel="noopener">https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/tools/benchmark）</a><pre><code>bazel build -c opt --config=android_arm64 tensorflow/lite/tools/benchmark:benchmark_model</code></pre></li><li>如果出现网站鉴权问题，可以配置bazel如下*<pre><code>alias bazel="bazel --host_jvm_args=-Djavax.net.ssl.trustStore='/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/cacerts' --host_jvm_args=-Djavax.net.ssl.trustStorePassword='changeit'"</code></pre>同时将对应需要鉴权的网站加入到cacerts文件，相关操作可以<a href="https://blog.csdn.net/wangjunjun2008/article/details/37662851" target="_blank" rel="noopener">参考</a></li></ul><h2 id="如何使用Bazel编译c-java-android"><a href="#如何使用Bazel编译c-java-android" class="headerlink" title="如何使用Bazel编译c++,java,android"></a>如何使用Bazel编译<a href="https://docs.bazel.build/versions/master/bazel-overview.html#how-do-i-get-started" target="_blank" rel="noopener">c++,java,android</a></h2></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bazel </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>搭建jupyter notebook 远程服务器</title>
       <link href="/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/"/>
       <url>/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/</url>
