@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>clangd安装</title>
+      <link href="/2021/03/24/clangd-an-zhuang/"/>
+      <url>/2021/03/24/clangd-an-zhuang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="ubuntu-安装-clangd"><a href="#ubuntu-安装-clangd" class="headerlink" title="ubuntu 安装 clangd"></a>ubuntu 安装 clangd</h1><h2 id="正常通过apt-get安装即可"><a href="#正常通过apt-get安装即可" class="headerlink" title="正常通过apt-get安装即可"></a>正常通过apt-get安装即可</h2><pre class=" language-shell"><code class="language-shell">sudo apt-get install clangd</code></pre><p>顺利的话，通过以上命令即可安装。</p><h2 id="可能的问题"><a href="#可能的问题" class="headerlink" title="可能的问题"></a>可能的问题</h2><h3 id="找不到源"><a href="#找不到源" class="headerlink" title="找不到源"></a>找不到源</h3><p>通常情况下如果你没有配置过专门的apt.source.list源的话，会报找不到安装包的问题。这时候需要配置源文件，<br>cat /etc/apt/apt.source.list<br>以ubuntu 16.04为例添加如下命令：(不同版本源不同，参考<a href="https://apt.llvm.org/" target="_blank" rel="noopener">https://apt.llvm.org/</a>)</p><pre class=" language-shell"><code class="language-shell">deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial maindeb-src http://apt.llvm.org/xenial/ llvm-toolchain-xenial main</code></pre><h3 id="找不到签名"><a href="#找不到签名" class="headerlink" title="找不到签名"></a>找不到签名</h3><p>添加源后，执行apt-get update可能汇报签名错误，如下</p><pre class=" language-shell"><code class="language-shell">The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 15CF4D18AF4F7421</code></pre><p>需要继续添加签名文件<br>以old-stable 分支为例，执行</p><pre class=" language-shell"><code class="language-shell">wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -</code></pre><p>执行成功之后再次执行</p><pre class=" language-shell"><code class="language-shell">sudo apt-get updatesudo apt-get install clangd</code></pre><p>不出意外的话，应该可以安装成功。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编译工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> clangd </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>oh-my-zsh终端</title>
       <link href="/2021/03/18/oh-my-zsh-zhong-duan/"/>
       <url>/2021/03/18/oh-my-zsh-zhong-duan/</url>
