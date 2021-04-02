@@ -156,6 +156,31 @@
     
     
     <entry>
+      <title>todo</title>
+      <link href="/2020/06/08/todo/"/>
+      <url>/2020/06/08/todo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h1><p><em>此列表记录需要做，还没做的事情</em></p><h2 id="blog"><a href="#blog" class="headerlink" title="blog"></a>blog</h2><h3 id="高效工作方法"><a href="#高效工作方法" class="headerlink" title="高效工作方法"></a>高效工作方法</h3><ul><li>5W2H法则</li><li>SWOT</li><li>PDCA</li><li>5W2H</li><li>SMART</li><li>WBS</li><li>时间管理</li><li>二八原则</li></ul><hr><h2 id="book"><a href="#book" class="headerlink" title="book"></a>book</h2><hr><h2 id="moves"><a href="#moves" class="headerlink" title="moves"></a>moves</h2><hr><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 待办 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> todo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>搭建jupyter notebook 远程服务器</title>
       <link href="/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/"/>
       <url>/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/</url>
