@@ -113,7 +113,9 @@
       
       <categories>
           
-          <category> Android,linux </category>
+          <category> Android </category>
+          
+          <category> linux </category>
           
       </categories>
       
