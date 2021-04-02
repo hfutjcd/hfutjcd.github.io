@@ -113,9 +113,7 @@
       
       <categories>
           
-          <category> Android </category>
-          
-          <category> linux </category>
+          <category> Android, linux, 编译工具 </category>
           
       </categories>
       
