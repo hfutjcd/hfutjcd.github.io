@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>android常用编译指令</title>
+      <link href="/2021/07/28/android-chang-yong-bian-yi-zhi-ling/"/>
+      <url>/2021/07/28/android-chang-yong-bian-yi-zhi-ling/</url>
+      
+        <content type="html"><![CDATA[<h1 id="android常用编译指令"><a href="#android常用编译指令" class="headerlink" title="android常用编译指令"></a>android常用编译指令</h1><h2 id="PRODUCT-COPY-FILES-和-BUILD-PREBUILT"><a href="#PRODUCT-COPY-FILES-和-BUILD-PREBUILT" class="headerlink" title="PRODUCT_COPY_FILES 和 BUILD_PREBUILT"></a>PRODUCT_COPY_FILES 和 BUILD_PREBUILT</h2><h3 id="PRODUCT-COPY-FILES"><a href="#PRODUCT-COPY-FILES" class="headerlink" title="PRODUCT_COPY_FILES"></a>PRODUCT_COPY_FILES</h3><p>PRODUCT_COPY_FILES变量主要用于执行编译前的一些拷贝操作，语法如下：</p><pre class=" language-shell"><code class="language-shell">PRODUCT_COPY_FILES += \    <source file>:<dest file></code></pre><p>该变量在<img src="https://android.googlesource.com/platform/build/+/refs/heads/oreo-release/core/product.mk#301" alt="build/make/core/product.mk">脚本之后变为只读状态。<br>要修改该变量要在build/make/core/product.mk之前修改。<br>如何需要在build/make/core/product.mk添加拷贝可以用：</p><h3 id="BUILD-PREBUILT"><a href="#BUILD-PREBUILT" class="headerlink" title="BUILD_PREBUILT"></a>BUILD_PREBUILT</h3><p>BUILD_PREBUILT 把拷贝操作当成一个项目操作，语法如下：</p><pre><code>include $(CLEAR_VARS)LOCAL_MODULE        := libxxxLOCAL_MODULE_CLASS  := SHARED_LIBRARIESLOCAL_MODULE_SUFFIX := .soLOCAL_STRIP_MODULE  := falseLOCAL_MULTILIB      := 64LOCAL_MODULE_OWNER  := qcomLOCAL_MODULE_TAGS   := optionalLOCAL_SRC_FILES     := ./lib64/libxxx.soLOCAL_MODULE_PATH   := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_VENDOR)/lib64LOCAL_PROPRIETARY_MODULE := trueinclude $(BUILD_PREBUILT)</code></pre><p>异同：<br>PRODUCT_COPY_FILES 和 BUILD_PREBUILT都可以执行拷贝操作，不同点在于PRODUCT_COPY_FILES的拷贝在生成<strong>img</strong>时会打包进去，BUILD_PREBUILT的拷贝不会被打包，需要在PRODUCT_PACKAGES中添加local才可以。<br>如下:</p><pre><code>PODUCT_PACKAGES += \          libxxx</code></pre><p>或者通过LOCAL_MODULE_TAGS变量在编译时动态控制。</p><h2 id="PODUCT-PACKAGES"><a href="#PODUCT-PACKAGES" class="headerlink" title="PODUCT_PACKAGES"></a>PODUCT_PACKAGES</h2><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> ndk </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ndk-build </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>clangd安装</title>
       <link href="/2021/03/24/clangd-an-zhuang/"/>
       <url>/2021/03/24/clangd-an-zhuang/</url>

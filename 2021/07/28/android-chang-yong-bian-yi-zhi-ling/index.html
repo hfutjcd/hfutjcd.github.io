@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>contact | Hunter</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="contact | Hunter">
+  <title>android常用编译指令 | Hunter</title>
+  <meta name="keywords" content=" ndk-build ">
+  <meta name="description" content="android常用编译指令 | Hunter">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="document.querySelectorAll(&#39;.github-emoji&#39;)           .forEach(el &#x3D;&gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&#39;img&#39;);             img.style">
 <meta property="og:type" content="website">
@@ -544,24 +544,39 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="contact-" class="article article-type-contact" itemscope itemprop="blogPost">
+        <article id="post-android常用编译指令" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">contact</h1>
+        <h1 class="article-title">android常用编译指令</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="ndk">ndk</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">ndk-build</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-07-28 12:40:24'>2020-03-01 15:19</time>
+            发布时间 : <time class="date" title='最后更新: 2021-07-28 12:40:24'>2021-07-28 00:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:52</span>
+        <span>字数:248</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -591,7 +606,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#android常用编译指令"><span class="toc-text">android常用编译指令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PRODUCT-COPY-FILES-和-BUILD-PREBUILT"><span class="toc-text">PRODUCT_COPY_FILES 和 BUILD_PREBUILT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PRODUCT-COPY-FILES"><span class="toc-text">PRODUCT_COPY_FILES</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BUILD-PREBUILT"><span class="toc-text">BUILD_PREBUILT</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PODUCT-PACKAGES"><span class="toc-text">PODUCT_PACKAGES</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -607,7 +622,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script>
+        <h1 id="android常用编译指令"><a href="#android常用编译指令" class="headerlink" title="android常用编译指令"></a>android常用编译指令</h1><h2 id="PRODUCT-COPY-FILES-和-BUILD-PREBUILT"><a href="#PRODUCT-COPY-FILES-和-BUILD-PREBUILT" class="headerlink" title="PRODUCT_COPY_FILES 和 BUILD_PREBUILT"></a>PRODUCT_COPY_FILES 和 BUILD_PREBUILT</h2><h3 id="PRODUCT-COPY-FILES"><a href="#PRODUCT-COPY-FILES" class="headerlink" title="PRODUCT_COPY_FILES"></a>PRODUCT_COPY_FILES</h3><p>PRODUCT_COPY_FILES变量主要用于执行编译前的一些拷贝操作，语法如下：</p>
+<pre class=" language-shell"><code class="language-shell">PRODUCT_COPY_FILES += \
+    <source file>:<dest file></code></pre>
+<p>该变量在<img src="https://android.googlesource.com/platform/build/+/refs/heads/oreo-release/core/product.mk#301" alt="build/make/core/product.mk">脚本之后变为只读状态。<br>要修改该变量要在build/make/core/product.mk之前修改。<br>如何需要在build/make/core/product.mk添加拷贝可以用：</p>
+<h3 id="BUILD-PREBUILT"><a href="#BUILD-PREBUILT" class="headerlink" title="BUILD_PREBUILT"></a>BUILD_PREBUILT</h3><p>BUILD_PREBUILT 把拷贝操作当成一个项目操作，语法如下：</p>
+<pre><code>include $(CLEAR_VARS)
+LOCAL_MODULE        := libxxx
+LOCAL_MODULE_CLASS  := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_STRIP_MODULE  := false
+LOCAL_MULTILIB      := 64
+LOCAL_MODULE_OWNER  := qcom
+LOCAL_MODULE_TAGS   := optional
+LOCAL_SRC_FILES     := ./lib64/libxxx.so
+LOCAL_MODULE_PATH   := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_VENDOR)/lib64
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)</code></pre><p>异同：<br>PRODUCT_COPY_FILES 和 BUILD_PREBUILT都可以执行拷贝操作，不同点在于PRODUCT_COPY_FILES的拷贝在生成<strong>img</strong>时会打包进去，BUILD_PREBUILT的拷贝不会被打包，需要在PRODUCT_PACKAGES中添加local才可以。<br>如下:</p>
+<pre><code>PODUCT_PACKAGES += \
+          libxxx</code></pre><p>或者通过LOCAL_MODULE_TAGS变量在编译时动态控制。</p>
+<h2 id="PODUCT-PACKAGES"><a href="#PODUCT-PACKAGES" class="headerlink" title="PODUCT_PACKAGES"></a>PODUCT_PACKAGES</h2><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -662,6 +696,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
