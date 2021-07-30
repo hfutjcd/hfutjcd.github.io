@@ -14,7 +14,7 @@
 <meta property="og:description" content="document.querySelectorAll(&#39;.github-emoji&#39;)           .forEach(el &#x3D;&gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&#39;img&#39;);             img.style">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-01T07:18:22.000Z">
-<meta property="article:modified_time" content="2021-07-30T02:53:36.664Z">
+<meta property="article:modified_time" content="2021-07-30T03:54:48.230Z">
 <meta property="article:author" content="Hunter">
 <meta property="article:tag" content="ISP DSP GPU Android">
 <meta name="twitter:card" content="summary">
@@ -579,7 +579,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-07-30 10:53:36'>2021-07-30 00:00</time>
+            发布时间 : <time class="date" title='最后更新: 2021-07-30 11:54:48'>2021-07-30 00:00</time>
         
     </div>
     <div class="article-meta">
@@ -632,11 +632,7 @@
       
         <h1 id="ndk-build脚本"><a href="#ndk-build脚本" class="headerlink" title="ndk-build脚本"></a>ndk-build脚本</h1><h2 id="ndk-build配置"><a href="#ndk-build配置" class="headerlink" title="ndk-build配置"></a>ndk-build配置</h2><p>ndk-build编译默认通过解析jni目录下的Android.mk和Application.mk两个文件获取编译行为。项目编译的关键就是配置好这两个文件。</p>
 <h2 id="Android-mk"><a href="#Android-mk" class="headerlink" title="Android.mk"></a>Android.mk</h2><p>脚本如下：</p>
-<pre><code>#===================
-#AUTHOR:   j00377698
-#LastEdit: 20210729
-#===================
-#展示构建一个项目，项目结构如下；
+<pre><code>#展示构建一个项目，项目结构如下；
 #64bitARM： demo.exe &lt;--share_lib_b.so &lt;--static_lib_c.a
 #                     &lt;--static_e.a
 #                 &lt;--prebuild_lib_d.so
@@ -752,11 +748,7 @@ endif
 $(info LOCAL_SHARED_LIBRARIES=$(LOCAL_SHARED_LIBRARIES))
 LOCAL_MULTILIB := both
 include $(BUILD_EXECUTABLE)</code></pre><h2 id="Application-mk"><a href="#Application-mk" class="headerlink" title="Application.mk"></a>Application.mk</h2><p>脚本如下：</p>
-<pre><code>#===============
-# AUTHOR: j00377698
-# lastEdit:20210729
-# ==============
-#Application.mk是配置目标 ABI、工具链、发布/调试模式和 STL的文件，其中的配置参数可以参考网站
+<pre><code>#Application.mk是配置目标 ABI、工具链、发布/调试模式和 STL的文件，其中的配置参数可以参考网站
 #https://developer.android.com/ndk/guides/application_mk#app_ldflags
 #常用的基本配置如下:
 
