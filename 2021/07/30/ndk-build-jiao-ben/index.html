@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>contact | Hunter</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="contact | Hunter">
+  <title>ndk-build脚本 | Hunter</title>
+  <meta name="keywords" content=" ndk-build ">
+  <meta name="description" content="ndk-build脚本 | Hunter">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="document.querySelectorAll(&#39;.github-emoji&#39;)           .forEach(el &#x3D;&gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&#39;img&#39;);             img.style">
 <meta property="og:type" content="website">
@@ -552,24 +552,39 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="contact-" class="article article-type-contact" itemscope itemprop="blogPost">
+        <article id="post-ndk-build脚本" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">contact</h1>
+        <h1 class="article-title">ndk-build脚本</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="ndk">ndk</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">ndk-build</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2021-07-30 10:53:36'>2020-03-01 15:19</time>
+            发布时间 : <time class="date" title='最后更新: 2021-07-30 10:53:36'>2021-07-30 00:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:52</span>
+        <span>字数:1.4k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -599,7 +614,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ndk-build脚本"><span class="toc-text">ndk-build脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ndk-build配置"><span class="toc-text">ndk-build配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android-mk"><span class="toc-text">Android.mk</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Application-mk"><span class="toc-text">Application.mk</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -615,7 +630,161 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script>
+        <h1 id="ndk-build脚本"><a href="#ndk-build脚本" class="headerlink" title="ndk-build脚本"></a>ndk-build脚本</h1><h2 id="ndk-build配置"><a href="#ndk-build配置" class="headerlink" title="ndk-build配置"></a>ndk-build配置</h2><p>ndk-build编译默认通过解析jni目录下的Android.mk和Application.mk两个文件获取编译行为。项目编译的关键就是配置好这两个文件。</p>
+<h2 id="Android-mk"><a href="#Android-mk" class="headerlink" title="Android.mk"></a>Android.mk</h2><p>脚本如下：</p>
+<pre><code>#===================
+#AUTHOR:   j00377698
+#LastEdit: 20210729
+#===================
+#展示构建一个项目，项目结构如下；
+#64bitARM： demo.exe &lt;--share_lib_b.so &lt;--static_lib_c.a
+#                     &lt;--static_e.a
+#                 &lt;--prebuild_lib_d.so
+
+#32bitARM： demo.exe &lt;--share_lib_b.so &lt;--static_lib_c.a
+#                     &lt;--static_e.a
+
+
+#此变量用于指定当前文件的路径。必须在 Android.mk 文件开头定义此变量。
+LOCAL_PATH := $(call my-dir)
+$(info LOCAL_PATH=$(LOCAL_PATH))
+$(info PRODUCT_OUT=$(PRODUCT_OUT))
+$(info TARGET_COPY_OUT_VENDOR=$(TARGET_COPY_OUT_VENDOR))
+$(info TARGET_ARCH_ABI =$(TARGET_ARCH_ABI))
+#LOCAL_MODULE
+#此变量用于存储模块名称。指定的名称在所有模块名称中必须唯一，并且不得包含任何空格。您必须先定义该名称，
+#然后才能添加任何脚本（CLEAR_VARS 的脚本除外）。无需添加 lib 前缀或 .so 或 .a 文件扩展名；
+#构建系统会自动执行这些修改。在整个 Android.mk 和 Application.mk 文件中，请用未经修改的名称引用模块。
+LOCAL_MODULE := static_lib_c
+
+#LOCAL_SRC_FILES 源文件
+LOCAL_SRC_FILES := ../src/static_lib_c.cpp
+
+#LOCAL_INC_FILES 头文件
+LOCAL_INC_FILES := static_lib_c.h
+
+#头文件所在位置
+LOCAL_C_INCLUDES :=  $(LOCAL_PATH)/../inc
+
+# #编译C文件时的flag信息
+# LOCAL_CFLAGS := -DTEST=ture
+
+LOCAL_CPPFLAGS := -DTEST=false
+
+#编译CPP文件时的头文件信息
+#LOCAL_MULTILIB 将 build 配置为适用于 32 位/64 位架构，并替换全局 TARGET_PREFER_32_BIT 变量。
+#将 LOCAL_MULTILIB 设置为以下其中一项：
+#"both" 同时构建 32 位和 64 位架构。
+#"32" 仅构建 32 位架构。
+#"64" 仅构建 64 位架构。
+#"first" 仅构建第一个架构（在 32 位设备中构建 32 位架构，在 64 位设备中构建 64 位架构）。
+#默认为 ""。构建系统根据模块类和其他 LOCAL_ 变量（如 LOCAL_MODULE_TARGET_ARCH 和 LOCAL_32_BIT_ONLY）决定要构建哪种架构。
+LOCAL_MULTILIB = both
+#include 模块定义结束
+include $(BUILD_STATIC_LIBRARY)
+
+
+#清理变量，再定义一个static_lib_e.a
+include $(CLEAR_VARS)
+LOCAL_MODULE := static_lib_e
+LOCAL_SRC_FILES :=  ../src/static_lib_e.cpp
+LOCAL_INC_FILES := static_lib_e.h
+LOCAL_C_INCLUDES :=  $(LOCAL_PATH)/../inc
+# LOCAL_CFLAGS := -DTEST=ture
+LOCAL_CPPFLAGS := -DTEST=false
+LOCAL_MULTILIB := both
+include $(BUILD_STATIC_LIBRARY)
+
+#清理变量，再定义一个share_lib_b
+include $(CLEAR_VARS)
+LOCAL_MODULE := share_lib_b
+LOCAL_SRC_FILES :=  ../src/share_lib_b.cpp
+LOCAL_INC_FILES := share_lib_b.h
+LOCAL_C_INCLUDES :=  $(LOCAL_PATH)/../inc
+LOCAL_CPPFLAGS := -DTEST=false
+LOCAL_STATIC_LIBRARIES := static_lib_c
+LOCAL_MULTILIB := both
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := prebuild_lib_d
+#LOCAL_MODULE_CLASS 将用于决定编译时的中间文件存放的位置,取值范围：ETC,STATIC_LIBRARIES,EXECUTABLES,FAKE,JAVA_LIBRARIES,SHARED_LIBRARIES,APPS
+#比如: SHARED_LIBRARIES, 通常#include()时会自动识别，不需要手动定义，一般在include $(BUILD_PREBUILT)时需要定义该变量，以便系统知道预编译文件类型。
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_SUFFIX 生成模块的后缀，一般常见的模块都有默认后缀，可以不用定义，如 .so, .a
+LOCAL_MODULE_SUFFIX := .so
+#LOCAL_STRIP_MODULE意思是把so的一些调试信息去掉，符号表啊什么的，这些是debug用的，，stip之后把这些东西去掉，可以让so变小，，
+#通俗地讲就是一个debug版本，一个是release版本
+#6.0之后，系统里面强制要strip so库，，如果你的so已经strip过了，再次strip就会报错，所以需要在android mk文件中加上这一句，不让它strip。
+#通常在incluce$(BUILD_PREBUILT)时定义改变量。
+LOCAL_STRIP_MODULE := false
+#定义模块的拥有者，比如QCOM，sangsong，huawei
+LOCAL_MODULE_OWNER := custom
+LOCAL_MULTILIB      := 64
+#user eng tests optional
+#user: 指该模块只在user版本下才编译
+#eng: 指该模块只在eng版本下才编译
+#tests: 指该模块只在tests版本下才编译
+#optional:指该模块在所有版本下都编译
+#一般不编img时不用设置变量
+LOCAL_MODULE_TAGS   := optional
+#指定文件所在路径，在BUILD_PREBUILD模式下会拷贝该文件到目标路径下
+LOCAL_SRC_FILES     :=  $(LOCAL_PATH)/../prebuild_lib64/libprebuild_lib_d.so
+#目标路径地址
+LOCAL_MODULE_PATH   := $(PRODUCT_OUT)/$(TARGET_COPY_OUT_VENDOR)/lib64
+#是否为供应商专有模块，如果是，必须放在vendorVendor模块是特定于供应商的可执行文件或共享库（必须将这些模块安装到供应商分区中）。
+#在 Android.bp 文件中，供应商模块必须将 vendor 或 proprietary 属性设为 true。
+#在 Android.mk 文件中，供应商模块必须将 LOCAL_VENDOR_MODULE 或 LOCAL_PROPRIETARY_MODULE 设为 true
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := demo
+LOCAL_SRC_FILES :=  ../src/demo.cpp
+LOCAL_INC_FILES := demo.h
+LOCAL_C_INCLUDES :=  $(LOCAL_PATH)/../inc
+LOCAL_CPPFLAGS := -DTEST=false
+LOCAL_STATIC_LIBRARIES := static_lib_e
+LOCAL_SHARED_LIBRARIES := share_lib_b
+ifeq ($(TARGET_ARCH_ABI),arm64-v8a)
+    LOCAL_SHARED_LIBRARIES += libaivideo
+endif
+$(info LOCAL_SHARED_LIBRARIES=$(LOCAL_SHARED_LIBRARIES))
+LOCAL_MULTILIB := both
+include $(BUILD_EXECUTABLE)</code></pre><h2 id="Application-mk"><a href="#Application-mk" class="headerlink" title="Application.mk"></a>Application.mk</h2><p>脚本如下：</p>
+<pre><code>#===============
+# AUTHOR: j00377698
+# lastEdit:20210729
+# ==============
+#Application.mk是配置目标 ABI、工具链、发布/调试模式和 STL的文件，其中的配置参数可以参考网站
+#https://developer.android.com/ndk/guides/application_mk#app_ldflags
+#常用的基本配置如下:
+
+
+NDK_TOOLCHAIN_VERSION := clang
+
+#APP_PLATFORM 会声明构建此应用所面向的 Android API 级别，并对应于应用的 minSdkVersion。
+#如果未指定，ndk-build 将以 NDK 支持的最低 API 级别为目标。最新 NDK 支持的最低 API 级别总是足够低，可以支持几乎所有有效设备。指定版本过高可能存在低版本不支持的情况
+APP_PLATFORM := android-29
+
+# APP_ABI 默认情况下，NDK 构建系统会为所有非弃用 ABI 生成代码。您可以使用 APP_ABI 设置为特定 ABI 生成代码。表 1 显示了不同指令集的 APP_ABI 设置。
+#      指令集                            值
+#   32 位 ARMv7                   APP_ABI := armeabi-v7a
+#   64 位 ARMv8 (AArch64)          APP_ABI := arm64-v8a
+#   x86                              APP_ABI := x86
+#   x86-64                          APP_ABI := x86_64
+#所有支持的 ABI（默认）              APP_ABI := all
+APP_ABI := arm64-v8a # armeabi-v7a
+
+#APP_STL 用于此应用的 C++ 标准库。
+#默认情况下使用 system STL。其他选项包括 c++_shared、c++_static 和 none
+APP_STL := c++_shared
+
+#APP_CPPFLAGS 要为项目中的所有 C++ 编译传递的标记。这些标记不会用于 C 代码
+APP_CPPFLAGS += -std=c++17 -fexceptions -frtti                
+
+#APP_LDFLAGS 关联可执行文件和共享库时要传递的标记。
+APP_LDFLAGS = -nodefaultlibs -lc -lm -ldl -lgcc</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -670,6 +839,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
