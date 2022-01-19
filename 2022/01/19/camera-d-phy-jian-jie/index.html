@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>contact | Hunter</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="contact | Hunter">
+  <title>Camera D-PHY简介 | Hunter</title>
+  <meta name="keywords" content=" D-PHY ">
+  <meta name="description" content="Camera D-PHY简介 | Hunter">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="document.querySelectorAll(&#39;.github-emoji&#39;)           .forEach(el &#x3D;&gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&#39;img&#39;);             img.style">
 <meta property="og:type" content="website">
@@ -612,24 +612,39 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="contact-" class="article article-type-contact" itemscope itemprop="blogPost">
+        <article id="post-Camera D-PHY简介" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">contact</h1>
+        <h1 class="article-title">Camera D-PHY简介</h1>
     
     <div class="article-meta">
         
         
         
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Camera">Camera</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color1">D-PHY</a>
+            
+        </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-01-19 11:10:22'>2020-03-01 15:19</time>
+            发布时间 : <time class="date" title='最后更新: 2022-01-19 11:10:22'>2022-01-19 00:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:52</span>
+        <span>字数:2.1k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -675,7 +690,59 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script>
+        <p><a href="https://deepinout.com/camera-terms/camera-dphy-intro.html" target="_blank" rel="noopener">转自</a>:<a href="https://deepinout.com/camera-terms/camera-dphy-intro.html" target="_blank" rel="noopener">https://deepinout.com/camera-terms/camera-dphy-intro.html</a></p>
+<p>D-PHY中的PHY是物理层（Physical）的意思，那么D是什么意思呢？</p>
+<p>在MIPI D-PHY的文档中有提到过，D-PHY的最初版本的设计目标是500Mbits/s，而D是罗马数字（拉丁文数字）中500 。</p>
+<p>同理C和M分别是罗马数字中的100和1000，也就是C-PHY和M-PHY中C和M的意思了。</p>
+<p>D-PHY是一种高速、低功耗的源同步物理层，由于采用了高功效设计，因此非常适合功耗大的电池供电设备使用。它里面同时包含了有助于实现高功效的高速模块和低功耗模块。载荷数据（图像数据）使用高速模块，控制和状态信息的发送（在照相机/显示器和应用处理器之间）使用的是低功耗模块（利用低频信号）。它具有在单个数据包脉冲中发送高速和低功耗数据的特殊能力。低功耗模块有助于节省功耗，高速模块则有助于实现高清晰度照片质量数据信号要求的较高带宽。</p>
+<p>如下图所示，MIPI信号（HS模式下）相对于传统的TMDS信号、LVDS信号等，具有低电压摆幅，低功耗的优势。</p>
+<p>MIPI低功耗</p>
+<p>MIPI 传输模式<br>MIPI D-PHY协议定义了两种传输模式：高速模式（High Speed，HS）和低功耗模式（Low Power，LP），两种模式使用不同的传输电平和传输机制。HS模式和LP模式的电平如下图所示：</p>
+<p>MIPI 传输模式</p>
+<p>其中，HS模式下，为差分信号传输，信号电平在100mV~300mV（200mV的压摆）；</p>
+<p>HS模式下，信号传输速度可达80Mbps<del>1Gbps（v1.0）或80Mbps</del>1.5Gbps（v1.1），采用源同步的传输方式，由主机（Master）设备向从机（Slave）设备提供DDR时钟。</p>
+<p>LP模式下，为单端信号传输，信号电平在0~1.2V（1.2V压摆）。</p>
+<p>LP模式下，信号传输速度为10Mbps，此时传输通道的差分线（HS模式下的）是两根独立的信号线。无论是HS模式还是LP模式，都采用LSB fisrt，MSB last的传输方式。</p>
+<p>为什么要这样设计？我个人的理解是这样的：HS模式下，信号传输速度较快，较低的压摆有利于提升传输速度，同时降低功耗和EMI；那么为什么LP模式下不用HS的传输机制呢？是因为LP模式下，传输的信号速度较慢，较低的压摆不利于系统的稳定（此时可能会有比较严重的过冲，如果采用100mV~300mV的电平的话）。</p>
+<p>一个完整的MIPI传输系统结构图如下：</p>
+<p>完整的MIPI传输系统结构图</p>
+<p>其中PHY Layer为物理层，如D-PHY，Low Level Protocol和Lane Management为中间层，如DSI和CSI，Application为应用层，可由软件或者硬件实现，以DSI系统为例，其中所有的命令需要符合MIPI的DCS（Display Command Set）规范。</p>
+<p>D-PHY协议最多支持5个Lane（通道）（一个时钟Lane，4个数据Lane），最少需要两个Lane（一个时钟Lane，一个数据Lane）。</p>
+<p>MIPI 传输模式</p>
+<p>如上图所示，一个通用的Lane中包含LP-TX、LP-RX、HS-TX、HS-RX和LP-CD模块，所有收发模块均共用同一个差分线Dp，Dn（在LP模式下，为两根单独的信号线）。整个Lane通过PPI接口（PHY Protocol Interface）与系统的其他部分连接。</p>
+<p>其中，LP-CD模块仅在存在于需要双向通信（Bidirectional）的系统中，对于不需要双向通信（Unidirectional）的系统，如CSI协议，则不需要LP-CD模块。显然，在Unidirectional系统中，主机（一般固定为Transmitter）则不需要RX模块，从机（一般固定为Receiver）则不需要TX模块。在需要双向通信的系统中，如DSI（当然，在特定的系统中，DSI也可以是Unidirectional的），一般只需要一个Data Lane具有双向收发的能力，其他的Data Lane和Clock Lane则可以根据实际需求，去除RX或者TX模块。需要注意的是，即使实在Unidirectional的系统中，Clock Lane也不需要反向传输，即当从机向主机发送数据时（反向传输），此时的DDR时钟仍然是由主机提供（HS模式下，LP模式下则不需要时钟）。</p>
+<p>比较有意思的地方是，在LP模式下（包括Control Mode和Escape Mode），采用的是Spaced-One-Hot Coding机制。在该机制下，时钟可以从传输的数据中得以体现，因此不需要传输时钟。此时，用户可以根据实际需求，设置Clock Lane继续运行或者关闭以降低功耗。关于Spaced-One-Hot Coding会在后面的博文中详细介绍。【注】我们常听到的LPDT模式（Low-Power Data Transmission）和ULPS模式（Ultra-Low Power State）都是Escape Mode的一种。</p>
+<p>综上所述，也就是说，D-PHY中一共有三种Lane，Unidirectional Clock Lane 、Unidirectional Data Lane以及Bi-directional Data Lane。</p>
+<p>需要注意的是，D-PHY的Bidirectional通信是一种半双工的双向通信模式，同时，反向传输的速度只有正向传输的1/4。</p>
+<p>MIPI D-PHY协议中规定了两种模式：LP模式和HS模式。其中HS模式只在高速数据传输中使用，而LP模式则同时包含控制模式（Control Mode）、低功耗数据传输模式（LPDT）和极低功耗模式（ULPS）。为了方便描述，D-PHY的协议文档中定义了Lane State的描述方式（标记符号），具体如下图所示：</p>
+<p>D-PHY的协议文档中定义了Lane State的描述方式</p>
+<p>同时规定了Lane Type的表述方式：</p>
+<p>Lane Type的表述方式</p>
+<p>举例来说，对于一个Unidirectional的系统来说，主机模块中的Data Lane至少需要包含HS-TX，LP-TX和CIL-MFXN；从机模块中的Data Lane则至少需要包含HS-RX、LP-RX和CIL-SFXN。对于一个支持反向HS模式通信的Bidirectional系统来说，主机模块中的Data Lane至少需要包含HS-TX、LP-TX、LP-RX、LP-CD和CIL-MFXY；而从机模块中的Data Lane则至少需要包含HS-RX、LP-RX、LP-TX、LP-CD和CIL-SFXY。当然，Bidirectional的通信系统也可以只支持LP的反向传输，而不支持HS的反向传输。</p>
+<p>下面详细介绍一下，Control、High-Speed和Escape操作模式的进入和退出方式：</p>
+<p>HS模式进入：LP11→LP01→LP00→SoT（Start of Transmission）；</p>
+<p>HS模式退出：EoT（End of Transmission）→LP11；</p>
+<p>Escape模式进入：LP11→LP10→LP00→LP01→LP00→Entry Code；</p>
+<p>Escape模式退出：LP10→LP11；</p>
+<p>TX端反转数据通信方向请求（Turnaround）：LP11→LP10→LP00→LP10→LP00；</p>
+<p>随后，等待一段时间后，RX端接管，并切换为TX端发送：LP00→LP10→LP11，切换完成。如下图所示：</p>
+<p>MIPI 传输模式</p>
+<p>其中，Escape模式中的Entry Code有如下几种：</p>
+<p>MIPI 传输模式</p>
+<p>以一次HS传输过程（即HS Data Transmission Burst）为例：</p>
+<p>MIPI 传输模式</p>
+<p>使用示波器观察Data Lane得到的波形图如下所示：</p>
+<p>示波器观察Data Lane得到的波形图</p>
+<p>示波器观察Data Lane得到的波形图</p>
+<p>示波器观察Data Lane得到的波形图</p>
+<p>前一篇文章中提到了，在LPDT模式下，Date Lane的时钟可以关闭，换句话说，就是LPDT模式不需要时钟同步，或者说是LPDT是异步传输数据的。下面以一次LPDT传输为例，简要地介绍一下：</p>
+<p>示波器观察Data Lane得到的波形图</p>
+<p>从上图中，可以发现，只要Dp和Dn上有有效内容在传输，任意两个数据之间都至少插入了一个Space State（LP00），这就是所谓的Spaced-One-Hot Coding。显然，时钟信号可以从Dp和Dn信号中恢复出来，换一句话来说，此时的数据传输是Self-clocked的。</p>
+<p>详细的状态（模式）转移图如下图所示：</p>
+<p>状态（模式）转移图</p>
+<p>其中，HS模式有时也被称为Busrt Mode，Low Power Mode包括Control Mode和Escape Mode。应当注意的是，Burst Mode和Escape Mode之间不可以直接来回切换，必须通过Control Mode进行中转，即：</p>
+<p>Burst Mode↔Control Mode↔Escape Mode</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -730,6 +797,46 @@
 
 
 
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
     
 
 
