@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title>git速查表</title>
+      <title>git 速查表</title>
       <link href="/2022/05/29/git-su-cha-biao/"/>
       <url>/2022/05/29/git-su-cha-biao/</url>
       
-        <content type="html"><![CDATA[<hr><p>title: git 速查表</p><p>top: false</p><p>cover: false</p><p>toc: true</p><p>mathjax: true</p><p>keywords: git</p><p>date: 2022-05-29 14:00:00</p><p>author: Hunter</p><p>img:</p><p>password:</p><p>summary:</p><p>tags:</p><p>  [git速查]</p><p>categories: git </p><p>reprintPolicy:</p><p>typora-copy-images-to: git</p><p>typora-root-url: git</p><p>-–</p><h1 id="git-速查表"><a href="#git-速查表" class="headerlink" title="git 速查表"></a>git 速查表</h1><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="建仓"><a href="#建仓" class="headerlink" title="建仓"></a>建仓</h3><ol><li>git clone  url -b localbranch -o remotebranch</li><li>git init -b localbranch</li></ol><h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><ol><li>git log</li><li>git log -vv</li><li>git relog</li></ol><h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><ol><li>git add</li><li>git commit –m “description”</li><li>git commit –am “add and commit”</li></ol><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><ol><li><p>git branch -a newbranch  //创建但停留在当前分支</p></li><li><p>git checkout -a newbranch //创建并切换到新分子</p></li></ol><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="git大文件上传限制"><a href="#git大文件上传限制" class="headerlink" title="git大文件上传限制"></a>git大文件上传限制</h3><ul><li><p>问题: 用github管理远程仓库时，git push存在大文件限制，单个文件不能超过100MB，git push 时的pack不能超过2GB。</p></li><li><p>方案：</p><ul><li><p>根据git 提示，使用git lfs插件可以解决单个大文件超过100MB的限制。<br>1.下载并安装<a href="https://github.com/git-lfs/git-lfs/releases/download/v3.2.0/git-lfs-windows-v3.2.0.exe" target="_blank" rel="noopener">git-lfs-windows-v3.2.0.exe</a><br>2.在git bash中安装该插件</p><pre><code>git lfs install</code></pre><p>3.在自己的仓中添加对大文件的管理,比如管理pdf类型文件</p><pre><code>git lfs track "*.psd"</code></pre><p>4.上述命令生成配置文件”.gitattributes”,把改文件添加到git中管理起来。</p><pre><code>git add .gitattributes</code></pre><p>5.跟平时一样使用git就可以了。</p></li></ul></li><li><p>git push 单次不能超过2GB限制: 分多次提交和push。</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h1 id="git-速查表"><a href="#git-速查表" class="headerlink" title="git 速查表"></a>git 速查表</h1><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h3 id="建仓"><a href="#建仓" class="headerlink" title="建仓"></a>建仓</h3><ol><li>git clone  url -b localbranch -o remotebranch</li><li>git init -b localbranch</li></ol><h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><ol><li>git log</li><li>git log -vv</li><li>git relog</li></ol><h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><ol><li>git add</li><li>git commit –m “description”</li><li>git commit –am “add and commit”</li></ol><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><ol><li><p>git branch -a newbranch  //创建但停留在当前分支</p></li><li><p>git checkout -a newbranch //创建并切换到新分子</p></li></ol><h2 id="问题汇总"><a href="#问题汇总" class="headerlink" title="问题汇总"></a>问题汇总</h2><h3 id="git大文件上传限制"><a href="#git大文件上传限制" class="headerlink" title="git大文件上传限制"></a>git大文件上传限制</h3><ul><li><p>问题: 用github管理远程仓库时，git push存在大文件限制，单个文件不能超过100MB，git push 时的pack不能超过2GB。</p></li><li><p>方案：</p><ul><li><p>根据git 提示，使用git lfs插件可以解决单个大文件超过100MB的限制。<br>1.下载并安装<a href="https://github.com/git-lfs/git-lfs/releases/download/v3.2.0/git-lfs-windows-v3.2.0.exe" target="_blank" rel="noopener">git-lfs-windows-v3.2.0.exe</a><br>2.在git bash中安装该插件</p><pre><code>git lfs install</code></pre><p>3.在自己的仓中添加对大文件的管理,比如管理pdf类型文件</p><pre><code>git lfs track "*.psd"</code></pre><p>4.上述命令生成配置文件”.gitattributes”,把改文件添加到git中管理起来。</p><pre><code>git add .gitattributes</code></pre><p>5.跟平时一样使用git就可以了。</p></li></ul></li><li><p>git push 单次不能超过2GB限制: 分多次提交和push。</p></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git速查 </tag>
+            
+        </tags>
       
     </entry>
     
