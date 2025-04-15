@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.changdong.ltd/"/>
-  <updated>2022-05-29T07:01:04.460Z</updated>
+  <updated>2022-05-29T06:00:00.000Z</updated>
   <id>https://blog.changdong.ltd/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.changdong.ltd/2022/05/29/git-su-cha-biao/"/>
     <id>https://blog.changdong.ltd/2022/05/29/git-su-cha-biao/</id>
     <published>2022-05-29T06:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2022-05-29T06:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -48,7 +48,7 @@
     <link href="https://blog.changdong.ltd/2022/01/19/camera-d-phy-jian-jie/"/>
     <id>https://blog.changdong.ltd/2022/01/19/camera-d-phy-jian-jie/</id>
     <published>2022-01-18T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.444Z</updated>
+    <updated>2022-01-18T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -56,7 +56,7 @@
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://deepinout.com/camera-terms/camera-dphy-intro.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;转自&lt;/a&gt;:&lt;a
+          &lt;p&gt;&lt;a href=&quot;https://deepinout.com/camera-terms/camera-dphy-intro.html&quot;&gt;转自&lt;/a&gt;:&lt;a
         
       
     
@@ -75,7 +75,7 @@
     <link href="https://blog.changdong.ltd/2021/11/29/sensor-ba-mian-chi-cun-gui-ge-shuo-ming/"/>
     <id>https://blog.changdong.ltd/2021/11/29/sensor-ba-mian-chi-cun-gui-ge-shuo-ming/</id>
     <published>2021-11-29T14:25:43.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2021-11-29T14:25:43.000Z</updated>
     
     <summary type="html">
     
@@ -83,7 +83,8 @@
       
         
         
-          &lt;p&gt;转自：&lt;a href=&quot;https://cloud.tencent.com/developer/article/1812677&quot; target=&quot;_blank&quot;
+          &lt;p&gt;转自：&lt;a href=&quot;https://cloud.tencent.com/developer/article/1812677&quot;&gt;https://cloud.tencent.com/developer/article/1812677&lt;/a&gt;&lt;/p&gt;
+ &lt;iframe
         
       
     
@@ -102,7 +103,7 @@
     <link href="https://blog.changdong.ltd/2021/10/21/jie-jue-cmder-zhong-vim-tui-chu-hou-zong-shi-qing-ping/"/>
     <id>https://blog.changdong.ltd/2021/10/21/jie-jue-cmder-zhong-vim-tui-chu-hou-zong-shi-qing-ping/</id>
     <published>2021-10-20T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.504Z</updated>
+    <updated>2021-10-20T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -130,7 +131,7 @@
     <link href="https://blog.changdong.ltd/2021/07/30/ndk-build-jiao-ben/"/>
     <id>https://blog.changdong.ltd/2021/07/30/ndk-build-jiao-ben/</id>
     <published>2021-07-29T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2021-07-29T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -157,7 +158,7 @@
     <link href="https://blog.changdong.ltd/2021/07/28/android-chang-yong-bian-yi-zhi-ling/"/>
     <id>https://blog.changdong.ltd/2021/07/28/android-chang-yong-bian-yi-zhi-ling/</id>
     <published>2021-07-27T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.456Z</updated>
+    <updated>2021-07-27T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -184,7 +185,7 @@
     <link href="https://blog.changdong.ltd/2021/03/24/clangd-an-zhuang/"/>
     <id>https://blog.changdong.ltd/2021/03/24/clangd-an-zhuang/</id>
     <published>2021-03-23T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2021-03-23T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -211,7 +212,7 @@
     <link href="https://blog.changdong.ltd/2021/03/18/oh-my-zsh-zhong-duan/"/>
     <id>https://blog.changdong.ltd/2021/03/18/oh-my-zsh-zhong-duan/</id>
     <published>2021-03-17T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2021-03-17T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -219,7 +220,7 @@
       
         
         
-          &lt;p&gt;&lt;em&gt;主要转自：&lt;a href=&quot;https://www.itshutong.com/articles/281/oh-my-zsh-the-best-shell-none，有部分修改&quot; target=&quot;_blank&quot;
+          &lt;p&gt;&lt;em&gt;主要转自：&lt;a
         
       
     
@@ -238,7 +239,7 @@
     <link href="https://blog.changdong.ltd/2021/01/25/bat-jiao-ben-bu-dan-chuang-yun-xing/"/>
     <id>https://blog.changdong.ltd/2021/01/25/bat-jiao-ben-bu-dan-chuang-yun-xing/</id>
     <published>2021-01-24T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.456Z</updated>
+    <updated>2021-01-24T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -266,7 +267,7 @@
     <link href="https://blog.changdong.ltd/2020/07/07/tu-xiang-chu-li-jing-dian-wang-luo/"/>
     <id>https://blog.changdong.ltd/2020/07/07/tu-xiang-chu-li-jing-dian-wang-luo/</id>
     <published>2020-07-06T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.468Z</updated>
+    <updated>2020-07-06T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -293,7 +294,7 @@
     <link href="https://blog.changdong.ltd/2020/06/08/ubuntu-install-android-sdk-ndk/"/>
     <id>https://blog.changdong.ltd/2020/06/08/ubuntu-install-android-sdk-ndk/</id>
     <published>2020-06-08T14:25:43.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2020-06-08T14:25:43.000Z</updated>
     
     <summary type="html">
     
@@ -322,7 +323,7 @@
     <link href="https://blog.changdong.ltd/2020/06/08/build-with-bazel/"/>
     <id>https://blog.changdong.ltd/2020/06/08/build-with-bazel/</id>
     <published>2020-06-07T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.456Z</updated>
+    <updated>2020-06-07T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -349,7 +350,7 @@
     <link href="https://blog.changdong.ltd/2020/06/08/todo/"/>
     <id>https://blog.changdong.ltd/2020/06/08/todo/</id>
     <published>2020-06-07T16:00:00.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2020-06-07T16:00:00.000Z</updated>
     
     <summary type="html">
     
@@ -377,7 +378,7 @@
     <link href="https://blog.changdong.ltd/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/"/>
     <id>https://blog.changdong.ltd/2020/04/13/da-jian-jupyter-notebook-yuan-cheng-fu-wu-qi/</id>
     <published>2020-04-13T15:02:03.000Z</published>
-    <updated>2022-05-29T07:01:04.500Z</updated>
+    <updated>2020-04-13T15:02:03.000Z</updated>
     
     <summary type="html">
     
@@ -400,7 +401,7 @@
     <link href="https://blog.changdong.ltd/2020/04/06/mtk-npu-dimensity-1000/"/>
     <id>https://blog.changdong.ltd/2020/04/06/mtk-npu-dimensity-1000/</id>
     <published>2020-04-06T07:00:34.000Z</published>
-    <updated>2022-05-29T07:01:04.444Z</updated>
+    <updated>2020-04-06T07:00:34.000Z</updated>
     
     <summary type="html">
     
@@ -431,7 +432,7 @@
     <link href="https://blog.changdong.ltd/2020/04/04/shi-me-shi-zhi-ling-ji/"/>
     <id>https://blog.changdong.ltd/2020/04/04/shi-me-shi-zhi-ling-ji/</id>
     <published>2020-04-04T13:38:46.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2020-04-04T13:38:46.000Z</updated>
     
     <summary type="html">
     
@@ -460,7 +461,7 @@
     <link href="https://blog.changdong.ltd/2020/03/27/hexo-da-jian-de-keng/"/>
     <id>https://blog.changdong.ltd/2020/03/27/hexo-da-jian-de-keng/</id>
     <published>2020-03-27T12:18:31.000Z</published>
-    <updated>2022-05-29T07:01:04.460Z</updated>
+    <updated>2020-03-27T12:18:31.000Z</updated>
     
     <summary type="html">
     
@@ -487,7 +488,7 @@
     <link href="https://blog.changdong.ltd/2020/03/11/xue-xi-android-xian-shi-xi-tong/"/>
     <id>https://blog.changdong.ltd/2020/03/11/xue-xi-android-xian-shi-xi-tong/</id>
     <published>2020-03-11T14:25:43.000Z</published>
-    <updated>2022-05-29T07:01:04.468Z</updated>
+    <updated>2020-03-11T14:25:43.000Z</updated>
     
     <summary type="html">
     
@@ -516,7 +517,7 @@
     <link href="https://blog.changdong.ltd/2020/03/01/bo-ke-ce-shi/"/>
     <id>https://blog.changdong.ltd/2020/03/01/bo-ke-ce-shi/</id>
     <published>2020-03-01T14:25:43.000Z</published>
-    <updated>2022-05-29T07:01:04.464Z</updated>
+    <updated>2020-03-01T14:25:43.000Z</updated>
     
     <summary type="html">
     
