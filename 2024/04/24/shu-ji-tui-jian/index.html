@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Camera D-PHY简介 | Hunter</title>
-  <meta name="keywords" content=" D-PHY ">
-  <meta name="description" content="Camera D-PHY简介 | Hunter">
+  <title>hexo 搭建的坑 | Hunter</title>
+  <meta name="keywords" content=" hexo ">
+  <meta name="description" content="hexo 搭建的坑 | Hunter">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="document.querySelectorAll(&#39;.github-emoji&#39;)           .forEach(el &#x3D;&gt; {             if (!el.dataset.src) { return; }             const img &#x3D; document.createElement(&#39;img&#39;);             img.style">
 <meta property="og:type" content="website">
@@ -646,9 +646,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Camera D-PHY简介" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-书籍推荐" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Camera D-PHY简介</h1>
+        <h1 class="article-title">hexo 搭建的坑</h1>
     
     <div class="article-meta">
         
@@ -658,7 +658,7 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="Camera">Camera</a>
+            <a  data-rel="hexo">hexo</a>
             
         </span>
         
@@ -666,19 +666,19 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color1">D-PHY</a>
+            <a class="color5">hexo</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-01-19 00:00:00'>2022-01-19 00:00</time>
+            发布时间 : <time class="date" title='最后更新: 2024-04-24 09:50:00'>2024-04-24 09:50</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:2.1k</span>
+        <span>字数:4.8k</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -708,7 +708,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AI-%E4%B9%A6%E7%B1%8D"><span class="toc-text">AI 书籍</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -724,58 +724,103 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a target="_blank" rel="noopener" href="https://deepinout.com/camera-terms/camera-dphy-intro.html">转自</a>:<a target="_blank" rel="noopener" href="https://deepinout.com/camera-terms/camera-dphy-intro.html">https://deepinout.com/camera-terms/camera-dphy-intro.html</a></p>
-<p>D-PHY中的PHY是物理层（Physical）的意思，那么D是什么意思呢？</p>
-<p>在MIPI D-PHY的文档中有提到过，D-PHY的最初版本的设计目标是500Mbits/s，而D是罗马数字（拉丁文数字）中500 。</p>
-<p>同理C和M分别是罗马数字中的100和1000，也就是C-PHY和M-PHY中C和M的意思了。</p>
-<p>D-PHY是一种高速、低功耗的源同步物理层，由于采用了高功效设计，因此非常适合功耗大的电池供电设备使用。它里面同时包含了有助于实现高功效的高速模块和低功耗模块。载荷数据（图像数据）使用高速模块，控制和状态信息的发送（在照相机/显示器和应用处理器之间）使用的是低功耗模块（利用低频信号）。它具有在单个数据包脉冲中发送高速和低功耗数据的特殊能力。低功耗模块有助于节省功耗，高速模块则有助于实现高清晰度照片质量数据信号要求的较高带宽。</p>
-<p>如下图所示，MIPI信号（HS模式下）相对于传统的TMDS信号、LVDS信号等，具有低电压摆幅，低功耗的优势。</p>
-<p>MIPI低功耗</p>
-<p>MIPI 传输模式<br>MIPI D-PHY协议定义了两种传输模式：高速模式（High Speed，HS）和低功耗模式（Low Power，LP），两种模式使用不同的传输电平和传输机制。HS模式和LP模式的电平如下图所示：</p>
-<p>MIPI 传输模式</p>
-<p>其中，HS模式下，为差分信号传输，信号电平在100mV~300mV（200mV的压摆）；</p>
-<p>HS模式下，信号传输速度可达80Mbps<del>1Gbps（v1.0）或80Mbps</del>1.5Gbps（v1.1），采用源同步的传输方式，由主机（Master）设备向从机（Slave）设备提供DDR时钟。</p>
-<p>LP模式下，为单端信号传输，信号电平在0~1.2V（1.2V压摆）。</p>
-<p>LP模式下，信号传输速度为10Mbps，此时传输通道的差分线（HS模式下的）是两根独立的信号线。无论是HS模式还是LP模式，都采用LSB fisrt，MSB last的传输方式。</p>
-<p>为什么要这样设计？我个人的理解是这样的：HS模式下，信号传输速度较快，较低的压摆有利于提升传输速度，同时降低功耗和EMI；那么为什么LP模式下不用HS的传输机制呢？是因为LP模式下，传输的信号速度较慢，较低的压摆不利于系统的稳定（此时可能会有比较严重的过冲，如果采用100mV~300mV的电平的话）。</p>
-<p>一个完整的MIPI传输系统结构图如下：</p>
-<p>完整的MIPI传输系统结构图</p>
-<p>其中PHY Layer为物理层，如D-PHY，Low Level Protocol和Lane Management为中间层，如DSI和CSI，Application为应用层，可由软件或者硬件实现，以DSI系统为例，其中所有的命令需要符合MIPI的DCS（Display Command Set）规范。</p>
-<p>D-PHY协议最多支持5个Lane（通道）（一个时钟Lane，4个数据Lane），最少需要两个Lane（一个时钟Lane，一个数据Lane）。</p>
-<p>MIPI 传输模式</p>
-<p>如上图所示，一个通用的Lane中包含LP-TX、LP-RX、HS-TX、HS-RX和LP-CD模块，所有收发模块均共用同一个差分线Dp，Dn（在LP模式下，为两根单独的信号线）。整个Lane通过PPI接口（PHY Protocol Interface）与系统的其他部分连接。</p>
-<p>其中，LP-CD模块仅在存在于需要双向通信（Bidirectional）的系统中，对于不需要双向通信（Unidirectional）的系统，如CSI协议，则不需要LP-CD模块。显然，在Unidirectional系统中，主机（一般固定为Transmitter）则不需要RX模块，从机（一般固定为Receiver）则不需要TX模块。在需要双向通信的系统中，如DSI（当然，在特定的系统中，DSI也可以是Unidirectional的），一般只需要一个Data Lane具有双向收发的能力，其他的Data Lane和Clock Lane则可以根据实际需求，去除RX或者TX模块。需要注意的是，即使实在Unidirectional的系统中，Clock Lane也不需要反向传输，即当从机向主机发送数据时（反向传输），此时的DDR时钟仍然是由主机提供（HS模式下，LP模式下则不需要时钟）。</p>
-<p>比较有意思的地方是，在LP模式下（包括Control Mode和Escape Mode），采用的是Spaced-One-Hot Coding机制。在该机制下，时钟可以从传输的数据中得以体现，因此不需要传输时钟。此时，用户可以根据实际需求，设置Clock Lane继续运行或者关闭以降低功耗。关于Spaced-One-Hot Coding会在后面的博文中详细介绍。【注】我们常听到的LPDT模式（Low-Power Data Transmission）和ULPS模式（Ultra-Low Power State）都是Escape Mode的一种。</p>
-<p>综上所述，也就是说，D-PHY中一共有三种Lane，Unidirectional Clock Lane 、Unidirectional Data Lane以及Bi-directional Data Lane。</p>
-<p>需要注意的是，D-PHY的Bidirectional通信是一种半双工的双向通信模式，同时，反向传输的速度只有正向传输的1/4。</p>
-<p>MIPI D-PHY协议中规定了两种模式：LP模式和HS模式。其中HS模式只在高速数据传输中使用，而LP模式则同时包含控制模式（Control Mode）、低功耗数据传输模式（LPDT）和极低功耗模式（ULPS）。为了方便描述，D-PHY的协议文档中定义了Lane State的描述方式（标记符号），具体如下图所示：</p>
-<p>D-PHY的协议文档中定义了Lane State的描述方式</p>
-<p>同时规定了Lane Type的表述方式：</p>
-<p>Lane Type的表述方式</p>
-<p>举例来说，对于一个Unidirectional的系统来说，主机模块中的Data Lane至少需要包含HS-TX，LP-TX和CIL-MFXN；从机模块中的Data Lane则至少需要包含HS-RX、LP-RX和CIL-SFXN。对于一个支持反向HS模式通信的Bidirectional系统来说，主机模块中的Data Lane至少需要包含HS-TX、LP-TX、LP-RX、LP-CD和CIL-MFXY；而从机模块中的Data Lane则至少需要包含HS-RX、LP-RX、LP-TX、LP-CD和CIL-SFXY。当然，Bidirectional的通信系统也可以只支持LP的反向传输，而不支持HS的反向传输。</p>
-<p>下面详细介绍一下，Control、High-Speed和Escape操作模式的进入和退出方式：</p>
-<p>HS模式进入：LP11→LP01→LP00→SoT（Start of Transmission）；</p>
-<p>HS模式退出：EoT（End of Transmission）→LP11；</p>
-<p>Escape模式进入：LP11→LP10→LP00→LP01→LP00→Entry Code；</p>
-<p>Escape模式退出：LP10→LP11；</p>
-<p>TX端反转数据通信方向请求（Turnaround）：LP11→LP10→LP00→LP10→LP00；</p>
-<p>随后，等待一段时间后，RX端接管，并切换为TX端发送：LP00→LP10→LP11，切换完成。如下图所示：</p>
-<p>MIPI 传输模式</p>
-<p>其中，Escape模式中的Entry Code有如下几种：</p>
-<p>MIPI 传输模式</p>
-<p>以一次HS传输过程（即HS Data Transmission Burst）为例：</p>
-<p>MIPI 传输模式</p>
-<p>使用示波器观察Data Lane得到的波形图如下所示：</p>
-<p>示波器观察Data Lane得到的波形图</p>
-<p>示波器观察Data Lane得到的波形图</p>
-<p>示波器观察Data Lane得到的波形图</p>
-<p>前一篇文章中提到了，在LPDT模式下，Date Lane的时钟可以关闭，换句话说，就是LPDT模式不需要时钟同步，或者说是LPDT是异步传输数据的。下面以一次LPDT传输为例，简要地介绍一下：</p>
-<p>示波器观察Data Lane得到的波形图</p>
-<p>从上图中，可以发现，只要Dp和Dn上有有效内容在传输，任意两个数据之间都至少插入了一个Space State（LP00），这就是所谓的Spaced-One-Hot Coding。显然，时钟信号可以从Dp和Dn信号中恢复出来，换一句话来说，此时的数据传输是Self-clocked的。</p>
-<p>详细的状态（模式）转移图如下图所示：</p>
-<p>状态（模式）转移图</p>
-<p>其中，HS模式有时也被称为Busrt Mode，Low Power Mode包括Control Mode和Escape Mode。应当注意的是，Burst Mode和Escape Mode之间不可以直接来回切换，必须通过Control Mode进行中转，即：</p>
-<p>Burst Mode↔Control Mode↔Escape Mode</p>
+        <h1 id="AI-书籍"><a href="#AI-书籍" class="headerlink" title="AI 书籍"></a>AI 书籍</h1><p>推荐人介绍：吴恩达（Andrew Ng），斯坦福大学计算机科学系和电子工程系副教授，人工智能实验室主任。</p>
+<p>《Human Compatible》  《人类兼容性》</p>
+<p>（与人类兼容：人工智能与控制问题）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132754874892288.blob?state=2" alt="image"><br>编辑推荐语：当全球都在为AI的威胁论或乌托邦幻想争论不休时，图灵奖得主Russell教授用这本里程碑式的著作给出了第三条道路。这不仅仅是一本技术指南，更是一份关乎人类文明存续的宣言书。这本书打破“AI必然超越人类”的思维定式，提出“不确定性设计”革命性框架，完整解析从自动驾驶到自主武器的现实风险，并揭示被忽视的文明级危机。</p>
+<p>作者简介：Stuart Russell，英国计算机科学家，因其对人工智能的贡献而闻名。</p>
+<p>阅读链接：<a target="_blank" rel="noopener" href="https://maxkasy.github.io/home/files/other/ML_Econ_Oxford/human_compatible.pdf">https://maxkasy.github.io/home/files/other/ML_Econ_Oxford/human_compatible.pdf</a><br>ill Gates推荐  比尔·盖茨推荐</p>
+<p>推荐人介绍：Bill Gates，美国企业家、软件工程师、慈善家，微软公司联合创始人，美国工程院院士，中国工程院外籍院士。</p>
+<p>《Life 3.0: Being Human in the Age of Artificial Intelligence》<br>《生命 3.0：人工智能时代的人类》</p>
+<p>（生命3.0：在人工智能的时代生而为人）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132755837734912.blob?state=2" alt="image"><br>Max Tegmark 著</p>
+<p>2017年 出版</p>
+<p>编辑推荐语：AI不仅在改变科技，也在重塑我们的社会、经济、甚至人类本身。在《Life 3.0》中，麻省理工学院物理学家Tegmark带领读者深入探讨AI如何影响犯罪、战争、就业、法律、公正，以及人类的生存意义。他不仅提出了发人深省的问题——AI会帮助人类繁荣，还是最终超越甚至取代人类？——还以科学方法分析了AI发展可能带来的机遇与风险。</p>
+<p>比尔·盖茨曾将本书列入“最喜欢的10本科技书”之一，并评价道：“任何想要讨论AI如何塑造世界的人，都应该读这本书。” Tegmark没有陷入简单的预测或恐慌，而是提供了一种理性、系统的视角，帮助读者建立AI时代的知识基线。</p>
+<p>作者简介：Max Tegmark，麻省理工学院教授。</p>
+<p>阅读链接：<a target="_blank" rel="noopener" href="https://www.cag.edu.tr/uploads/site/lecturer-files/max-tegmark-life-30-being-human-in-the-age-of-artificial-intelligence-alfred-a-knopf-2017-aTvn.pdf">https://www.cag.edu.tr/uploads/site/lecturer-files/max-tegmark-life-30-being-human-in-the-age-of-artificial-intelligence-alfred-a-knopf-2017-aTvn.pdf</a></p>
+<p>《The Master Algorithm》  《大师算法》<br>终极算法：机器学习和人工智能如何重塑世界）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132756890505216.blob?state=2" alt="image"><br>Pedro Domingos 著  佩德罗·多明戈斯 著</p>
+<p>2015年 出版</p>
+<p>编辑推荐语：如果数据是新时代的石油，那么“终极算法”（Master Algorithm）就是炼金术的终极秘方。在这本开创性的著作中，机器学习权威Domingos带领读者深入全球顶尖AI实验室，揭示驱动科技巨头的学习机器如何悄然重塑我们的世界。本书不仅讲述了AI如何在推荐系统、搜索引擎、语音助手、医疗诊断等领域发挥作用，更深入剖析了五大机器学习流派的核心思想，并提出一个大胆的设想：是否存在一个能够整合所有学习方法的“终极算法”，解锁人工智能的最终奥秘？</p>
+<p>作者简介：Pedro Domingos, 华盛顿大学计算机科学与工程系名誉教授。</p>
+<p>阅读链接：<a target="_blank" rel="noopener" href="https://geekdaxue.co/read/winforlife@vgzph9/ic0kyn">https://geekdaxue.co/read/winforlife@vgzph9/ic0kyn</a></p>
+<p>Eric Schmidt推荐  埃里克·施密特推荐</p>
+<p>推荐人介绍：Eric Schmidt，前计算机工程师，前谷歌首席执行官，现航空航天制造公司Relativity Space首席执行官。</p>
+<p>《Machine, Platform, Crowd: Harnessing Our Digital Future》<br>《机器、平台、群体：驾驭我们的数字未来》</p>
+<p>（机器、平台和大众：正影响着我们的数字化未来）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132758194589696.blob?state=2" alt="image"><br>Andrew McAfee，Erik Brynjolfsson 合著<br>安德鲁·麦卡菲，埃里克·布林约尔森合著</p>
+<p>2017年 出版</p>
+<p>编辑推荐语：人工智能、数字平台和群体智慧正在重塑商业世界。从AlphaGo战胜人类棋手，到苹果、谷歌等颠覆传统行业，再到众包模式超越企业实验室，技术变革的速度和规模超乎想象。MIT学者McAfee和Brynjolfsson在本书中剖析了企业如何适应这一新时代，平衡三大关键要素：机器与人类智能、平台与产品、核心决策与群体智慧。前谷歌CEO、Alphabet执行董事长Eric Schmidt评价道：“即使是硅谷，也对当今变化的速度和规模感到惊讶。要跟上时代，最好的办法就是理解那些能够持续存在的原则，而本书正是对这些原则最好的诠释。”</p>
+<p>作者简介：Andrew McAfee，麻省理工学院首席研究科学家。Erik Brynjolfsson，麻省理工学院教授。</p>
+<p>Fei-Fei Li推荐  李飞飞推荐</p>
+<p>推荐人介绍：李飞飞（Fei-Fei Li），斯坦福大学计算机科学系教授，斯坦福视觉实验室负责人，斯坦福大学人工智能实验室（SAIL）前负责人。</p>
+<p>《Supersizing the Mind: Embodiment, Action, and Cognitive Extension》<br>《心灵放大：具身化、行动与认知扩展》</p>
+<p>（放大心灵：具身,行为与认知延展）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132759855878144.blob?state=2" alt="image"><br>ndy Clark 著  安迪·克拉克 著</p>
+<p>2008年 出版</p>
+<p>编辑推荐语：“思维从不止步于大脑。”书中，认知科学家Clark提出了一项颠覆传统的理论：心智并非局限于脑内，而是通过身体、工具与环境延展出去的系统整体。Clark借助心理学、神经科学、人工智能、语言学、机器人学等跨学科成果，构建了“扩展心智”理论。他认为，大脑、身体与环境之间的反馈回路构成了一个协同工作的认知整体。从我们手中的笔到日常使用的AI助手，每一个外部工具都可能成为思维的一部分，影响甚至塑造我们的推理能力与认知路径。李飞飞曾表示，这本书延续了她在研究中极为关注的“具身性、行动性与认知延展”主题。正是这种对技术与人类感知之间深层关系的探讨，使本书成为认知科学、AI研究乃至教育、设计等多个领域的重要思想资源。</p>
+<p>作者简介：Andy Clark，英国哲学家，萨塞克斯大学认知学教授。</p>
+<p>阅读链接：<a target="_blank" rel="noopener" href="https://achrafkassioui.com/library/Andy%20Clark%20-%20Supersizing%20the%20mind.pdf">https://achrafkassioui.com/library/Andy%20Clark%20-%20Supersizing%20the%20mind.pdf</a> </p>
+<p>Geoffrey Hinton推荐  几何·辛顿 推荐</p>
+<p>推荐人介绍：Geoffrey Hinton，英国出生的加拿大计算机学家和心理学家，多伦多大学教授，图灵奖与诺贝尔物理学奖获得者，被誉为“深度学习教父”。</p>
+<p>《Probabilistic Machine Learning: An Introduction》<br>《概率机器学习：导论》</p>
+<p>（概率机器学习：简介）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132760673767424.blob?state=2" alt="image"><br>KevinP. Murphy 著  著者：KevinP. Murphy</p>
+<p>2022年 出版</p>
+<p>编辑推荐语：这本详尽的机器学习入门书籍，通过概率建模和贝叶斯决策理论的视角，为读者提供了对机器学习（包括深度学习）的深刻理解。书中不仅覆盖了必要的数学背景（如线性代数和优化方法），还从基本的监督学习（如线性回归、逻辑回归和深度神经网络）讲起，逐步深入到更高级的主题（如迁移学习和无监督学习）。本书获Geoffrey Hinton和Yoshua Bengio等AI领域的领军人物高度评价，认为其内容清晰、结构严谨，具备极高的实践价值。</p>
+<p>作者简介：Kevin P. Murphy，谷歌研究科学家。</p>
+<p>Ilya Sutskever推荐  Ilya Sutskever 推荐</p>
+<p>推荐人介绍：Ilya Sutskever，前OpenAI联合创始人兼首席科学家，现任Safe Superintelligence Inc.联合创始人兼首席科学家。</p>
+<p>《Kolmogorov Complexity and Algorithmic Randomness》<br>《科尔莫哥洛夫复杂性与算法随机性》</p>
+<p>（科尔莫哥洛夫复杂性与算法随机性）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132761587781632.blob?state=2" alt="image"><br>Rodney G. Downey，Denis R. Hirschfeldt 合著<br>罗德尼·G·唐尼，丹尼斯·R·赫希菲尔特合著</p>
+<p>2010年 出版</p>
+<p>编辑推荐语：在人工智能时代重读Kolmogorov的智慧遗产，这部由莫斯科数学学派带来的权威著作，将彻底改变您对“随机性”的认知。本书系统梳理从Solomonoff到Levin的算法信息理论发展史，完整呈现“柯氏复杂度”这一革命性概念的演进历程，独创“文本嵌入式练习”设计，在证明过程中设置关键思考节点，实现“读-思-悟”三位一体学习体验。本书犹如一把钥匙，既开启了理解生物DNA序列、宇宙微波背景辐射等自然编码的奥秘之门，也为构建下一代高效学习算法提供了理论基础。无论您是理论计算机科学研究者，还是量子计算、密码学领域的实践者，都将在这部著作中发现意想不到的深刻洞见。</p>
+<p>作者简介：Rodney G. Downey, 新西兰和澳大利亚数学家和计算机科学家。Denis R. Hirschfeldt, 美国计算机科学家。</p>
+<p>Jensen Huang推荐   黄仁勋推荐</p>
+<p>推荐人介绍：黄仁勋（Jensen Huang），英伟达联合创始人兼首席执行官。</p>
+<p>《Rebooting AI : Building Artificial Intelligence We Can Trust》<br>《重启人工智能：构建我们可以信赖的人工智能》</p>
+<p>（重启人工智能）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132762347294720.blob?state=2" alt="image"><br>Gary Marcus，Ernest Davis 合著<br>加里·马库斯，欧内斯特·戴维斯 合著</p>
+<p>2020年 出版</p>
+<p>编辑推荐语：在人工智能被过度神话化的时代，本书是少数能提供冷静、理性视角的著作之一。本书不是对AI的盲目吹捧，也不是末日论的危言耸听，而是基于扎实的技术分析，直指当前人工智能的能力边界与短板。Marcus和Davis两位知名学者在书中系统梳理了AI与“通用人工智能”（AGI）之间的鸿沟，揭示媒体与资本市场过度包装的误区。他们不仅批判当前深度学习的局限性，还探讨如何打造真正可信赖的人工智能，为商业领袖、技术专家和投资者提供务实的AI发展路线图。如果您想跳脱AI行业的炒作泡沫，理解AI的真实能力和未来发展方向，那么这本书将是您建立理性认知的重要指南。</p>
+<p>作者简介：Gary Marcus，科学家、畅销书作家和企业家。Ernest Davis，纽约大学计算机科学系教授。</p>
+<p>阅读链接：<a target="_blank" rel="noopener" href="http://tankona.free.fr/marcus2019.pdf">http://tankona.free.fr/marcus2019.pdf</a><br>阅读链接：<a target="_blank" rel="noopener" href="http://tankona.free.fr/marcus2019.pdf">http://tankona.free.fr/marcus2019.pdf</a></p>
+<p>《The Alignment Problem》  《对齐问题》</p>
+<p>（人机对齐）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132763970146304.blob?state=2" alt="image"><br>Brian Christian 著  布莱恩·克里斯蒂安 著</p>
+<p>2020年 出版</p>
+<p>编辑推荐语：在这个AI决策日益渗透日常生活的时代，机器学习系统正在代替人类进行医疗诊断、金融决策甚至司法判断。然而，当这些系统的目标与人类真实意图出现偏差时，我们将面临怎样的危机？畅销书作家Christian带来这部震撼业界的深度调查，揭示AI发展中最关键却最被忽视的挑战——人机对齐问题（The Alignment Problem）。本书对于“当医疗AI过度优化床位周转率时，可能选择拒收重症患者”、“从招聘歧视到司法不公的连锁反应”、“自动驾驶为准时抵达不惜危险驾驶等真实场景”等一系列隐形危机进行深度剖析，揭露AI偏见背后的人类社会固有偏见以及通过机器之眼反观人类价值体系的矛盾与模糊。</p>
+<p>作者简介：Brian Christian，美国非虚构文学作家、诗人、程序员和研究员。</p>
+<p>Reid Hoffman推荐  里德·霍夫曼 推荐</p>
+<p>推荐人介绍：Reid Hoffman，LinkedIn、Inflection AI联合创始人。</p>
+<p>《The Second Machine Age: Work, Progress, and Prosperity in a Time of Brilliant Technologies》<br>《第二次机器时代：在辉煌技术时代的劳动、进步与繁荣》</p>
+<p>（第二次机器革命：数字化技术将如何改变我们的经济与社会）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132765379776512.blob?state=2" alt="image"><br>Erik Brynjolfsson，Andrew McAfee 合著<br>埃里克·布林约尔松，安德鲁·麦卡菲 合著</p>
+<p>2014年 出版</p>
+<p>编辑推荐语：随着自动驾驶汽车和IBM的Watson系统不断挑战传统智慧，数字技术正以前所未有的速度改变着我们对工作的定义。从疾病诊断到零售创新，未来数字技术将完成曾被认为仅能由人类完成的任务。Brynjolfsson和McAfee通过多年的研究，揭示了数字技术革命的力量，并提出了一条适应新经济的战略道路：从教育改革，到人与机器协作的创新模式，再到制定适应这一变革时代的政策，他们展示了如何在这个快速转型的世界中生存与繁荣。正如LinkedIn联合创始人Reid Hoffman所说，它提供了对这一过程的重要见解，而这一进程才刚刚开始。《The Second Machine Age》不仅改变了我们对技术、社会与经济进步的思考，也是一本关于未来时代的乐观探索。</p>
+<p>作者简介：Erik Brynjolfsson，美国学者、作家和发明家。Andrew McAfee，麻省理工学院的首席研究科学家。</p>
+<p>阅读链接：<a target="_blank" rel="noopener" href="http://digamo.free.fr/brynmacafee2.pdf">http://digamo.free.fr/brynmacafee2.pdf</a></p>
+<p>Sam Altman推荐  Sam Altman 推荐</p>
+<p>推荐人介绍：Sam Altman，美国企业家、投资人、人工智能实验室OpenAI联合创始人、首席执行官；被媒体称为ChatGPT之父。</p>
+<p>《Superintelligence: Paths, Dangers, Strategies》<br>《超级智能：路径、危险、策略》</p>
+<p>（超级智能：路线图、危险性与应对策略）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132766545448960.blob?state=2" alt="image"><br>Nick Bostrom 著</p>
+<p>2014年 出版</p>
+<p>编辑推荐语：如果机器的智能超越人类，我们将走向繁荣还是毁灭？牛津大学哲学家Bostrom在本书中提出了一个关乎人类存亡的核心问题：超级智能是否能被控制？他以严密的逻辑推理，剖析AI发展的多种可能路径，并警示我们应如何未雨绸缪，以避免灾难性的后果。</p>
+<p>人工智能专家Stuart Russell曾评论道：“Bostrom令人信服地证明，AI的未来影响可能是人类面临的最重要问题。本书以前所未有的细节勾勒出未来暗藏的礁石，标志着一个新时代的开启。”这不仅是一本关于技术发展的书籍，更是一场关于人类命运的深刻思考。Altman也曾表示，Bostrom的杰作是我所见过的关于该主题最出色的著作。如果您关心AI的终极走向、科技伦理，或是希望理解如何在AI时代掌握主动权，这本书值得一读。</p>
+<p>作者简介：Nick Bostrom，瑞典哲学家，牛津大学人类未来研究所所长。</p>
+<p>Stuart Russell推荐  斯图尔特·罗素推荐</p>
+<p>推荐人介绍：Stuart Russell，美国加州大学伯克利分校教授、人工智能系统中心创始人。</p>
+<p>《Artificial Intelligence: A Modern Approach》<br>《人工智能：一种现代的方法》</p>
+<p>（人工智能：一种现代的方法）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132767231311872.blob?state=2" alt="image"><br>Stuart Russell，Peter Norvig 合著<br>斯图尔特·罗素，彼得·诺维格 合著</p>
+<p>2020年 出版</p>
+<p>编辑推荐语：作为人工智能领域最经典的教材之一，本书以系统化的方式全面呈现AI的核心知识与发展脉络。全书覆盖从问题求解、知识表示、规划、自然语言处理，到机器学习、机器人技术和计算机视觉等多个关键领域，凝练了两位作者数十年来AI研究与应用的精华。书中内容循序渐进，前几章铺设理论基础，回顾AI发展史，并梳理塑造该领域的重要思想。作者以严谨而富有洞见的笔触，将理论推导与现实案例相结合，使读者不仅能理解技术本质，还能洞察AI在现实世界的应用。特别是在机器学习部分，书中从基础的线性回归模型，到强化学习、神经网络等前沿技术，展现了AI如何成为推动现代科技变革的关键力量。</p>
+<p>作者简介：Peter Norvig, 美国计算机科学家。</p>
+<p>阅读链接：<a target="_blank" rel="noopener" href="https://people.engr.tamu.edu/guni/csce625/slides/AI.pdf">https://people.engr.tamu.edu/guni/csce625/slides/AI.pdf</a></p>
+<p>Yann LeCun推荐  杨立昆 推荐</p>
+<p>推荐人介绍：Yann LeCun，法国计算机科学家，2018年图灵奖得主。</p>
+<p>《Genius Makers》  《天才创造者》</p>
+<p>（制造天才的天才们）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132768229556224.blob?state=2" alt="image"><br>Cade Metz 著</p>
+<p>2021年 出版</p>
+<p>编辑推荐语：如果说人工智能是改变世界的力量，那这本书讲述的，正是点燃这场革命的“引擎人物”。《纽约时报》科技记者Metz以记者的笔触、小说的节奏，描绘了深度学习如何从学术边缘跃入科技中心，最终改变了Google、Facebook、微软乃至整个世界的进程。这是一本关于AI黄金时代的开创者们的传记体群像——从不坐飞机、却执意穿越北美参加深度学习盛会的老派教授Geoffrey Hinton，到少年成名、誓言打造“通用智能”机器的大脑极客Demis Hassabis，再到背后推动这场技术军备竞赛的Elon Musk、OpenAI、以及中美科技巨头。Metz用数百次独家采访，拼接出这场人机智能竞逐中最关键的幕后故事。Yann LeCun称这本书“讲述了深度学习崛起中许多未曾公开的故事，是一本非常好的AI简史”。</p>
+<p>作者简介：Cade Metz，纽约时报科技记者。</p>
+<p>《Deep Learning with PyTorch》<br>《深度学习与 PyTorch》</p>
+<p>（使用PyTorch进行深度学习）<br><img src="https://www.chaspark.com/chasiwu/media/v1/tinyimage/1133132769273937920.blob?state=2" alt="image"><br>Eli Stevens，Luca Antiga，Thomas Viehmann合著<br>Eli Stevens，Luca Antiga，Thomas Viehmann 合著</p>
+<p>2020年 出版</p>
+<p>编辑推荐语：自2016年诞生以来，PyTorch已经成为当今最火热的深度学习框架之一。这本PyTorch权威教程书一经问世，便获得Yann LeCun力荐，是入门PyTorch及深度学习的绝佳教材。书中不仅注重理论知识的讲解，更强调实战应用，通过直观的解释和精选的代码示例，让读者既能理解深度学习的底层原理，又能快速上手实践。内容从基础到进阶，从系统介绍PyTorch和深度学习的基础知识，到结合真实项目案例，深入探讨高级概念，带领读者完成端到端的深度学习实践。</p>
+<p>作者简介：Eli Stevens，现任Zoox软件工程师。Luca Antiga，Orobix联合创始人兼CTO。Thomas Viehmann，Lightning-AI首席研究工程师。</p>
+<p>阅读链接：<a target="_blank" rel="noopener" href="https://isip.piconepress.com/courses/temple/ece_4822/resources/books/Deep-Learning-with-PyTorch.pdf">https://isip.piconepress.com/courses/temple/ece_4822/resources/books/Deep-Learning-with-PyTorch.pdf</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
