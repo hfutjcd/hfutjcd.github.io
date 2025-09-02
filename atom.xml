@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.changdong.ltd/"/>
-  <updated>2025-04-24T12:50:00.000Z</updated>
+  <updated>2025-09-02T02:00:00.000Z</updated>
   <id>https://blog.changdong.ltd/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI环境问题汇总</title>
+    <link href="https://blog.changdong.ltd/2025/09/02/ai-huan-jing-wen-ti-hui-zong/"/>
+    <id>https://blog.changdong.ltd/2025/09/02/ai-huan-jing-wen-ti-hui-zong/</id>
+    <published>2025-09-02T02:00:00.000Z</published>
+    <updated>2025-09-02T02:00:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;AI环境问题汇总&quot;&gt;&lt;a href=&quot;#AI环境问题汇总&quot; class=&quot;headerlink&quot; title=&quot;AI环境问题汇总&quot;&gt;&lt;/a&gt;AI环境问题汇总&lt;/h1&gt;&lt;script&gt;
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>书籍推荐</title>
@@ -536,36 +560,6 @@
       <category term="android" scheme="https://blog.changdong.ltd/tags/android/"/>
     
       <category term="surfaceflinger" scheme="https://blog.changdong.ltd/tags/surfaceflinger/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客测试</title>
-    <link href="https://blog.changdong.ltd/2020/03/01/bo-ke-ce-shi/"/>
-    <id>https://blog.changdong.ltd/2020/03/01/bo-ke-ce-shi/</id>
-    <published>2020-03-01T14:25:43.000Z</published>
-    <updated>2020-03-01T14:25:43.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;博客测试&quot;&gt;&lt;a href=&quot;#博客测试&quot; class=&quot;headerlink&quot; title=&quot;博客测试&quot;&gt;&lt;/a&gt;博客测试&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;记录写blog过程中遇到的语法，便于查询&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-    
-      <category term="语法测试" scheme="https://blog.changdong.ltd/categories/%E8%AF%AD%E6%B3%95%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="语法测试" scheme="https://blog.changdong.ltd/tags/%E8%AF%AD%E6%B3%95%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>AI环境问题汇总</title>
+      <link href="/2025/09/02/ai-huan-jing-wen-ti-hui-zong/"/>
+      <url>/2025/09/02/ai-huan-jing-wen-ti-hui-zong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="AI环境问题汇总"><a href="#AI环境问题汇总" class="headerlink" title="AI环境问题汇总"></a>AI环境问题汇总</h1><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>书籍推荐</title>
       <link href="/2025/04/24/shu-ji-tui-jian/"/>
       <url>/2025/04/24/shu-ji-tui-jian/</url>
